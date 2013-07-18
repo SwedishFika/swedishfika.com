@@ -1,4 +1,4 @@
 swedishfika.com
 ===============
 
-The official web site of Swedish Fika
+The official Web Site of Swedish Fika

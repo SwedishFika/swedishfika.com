@@ -53,8 +53,6 @@
 						<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
 					<?php } ?>
 					<p><?php  bloginfo('description'); ?></p>
-					
-					
 					<nav role="navigation">
 						<?php swedishfika_main_nav(); ?>
 					</nav>
