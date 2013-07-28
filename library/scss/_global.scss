@@ -1,0 +1,12 @@
+html, body{
+	background-color: $main-bg;
+	color: $main-text;
+}
+body{
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: calc-percent(31, 1280);
+}
+a{
+	color: $link-color;
+}
