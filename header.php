@@ -8,7 +8,7 @@
 	 */
 	global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+	wp_title( '-', true, 'right' );
 
 	// Add the blog name.
 	bloginfo( 'name' );
@@ -16,11 +16,11 @@
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+		echo " - $site_description";
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
+		echo ' - ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 	?></title>
 		
@@ -46,11 +46,11 @@
 		
 	</head>
 	<body <?php body_class(); ?>>
-			<header class="header" role="banner">
+			<header class="higher-than-the-sky" role="banner">
 					<?php if ( $site_description && ( is_home() || is_front_page() ) ){ ?>
-						<h1><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
+						<h1><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/swedish-fika-logo.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
 					<?php }else{ ?>
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="" alt="<?php bloginfo('name'); ?>" /></a>
 					<?php } ?>
 					<p><?php  bloginfo('description'); ?></p>
 					<nav role="navigation">

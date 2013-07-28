@@ -19,7 +19,13 @@ of the styles inside media queries.
 @import "normalize";
 
 // import mixins
-//@import "mixins";
+@import "mixins";
+
+/* GLOBAL 
+This is totally everywhere and especially for older antique devices 
+or devices with an extremely slow connection.
+*/
+@import "global";
 
 /*
 BASE (MOBILE) SIZE

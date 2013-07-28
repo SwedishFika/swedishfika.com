@@ -21,36 +21,43 @@ CLEARFIXIN'
 *********************/
 
 // Contain floats: nicolasgallagher.com/micro-clearfix-hack/
-.clearfix {
+/*.clearfix {
   zoom: 1;
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
-}
+}*/
 
 /*********************
 TOOLS
 *********************/
 
 // BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
-* { 
+/** { 
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing:    border-box; 
 	box-sizing:         border-box; 
-}
+}*/
 
 // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ 
-.image-replacement {
+/*.image-replacement {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 }
+*/
 
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
 
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+
+$main-bg:			#fafafa;
+$main-text:			#666565;
 
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
@@ -60,10 +67,10 @@ $alert-blue:        #d5edf8;
 $black:             #000;
 $white:             #fff;
 
-$swedishfika-pink:        #11a01e;
-$swedishfika-blue:        #1990db;
+$swedishfika-link:  #80c8ce;
+$swedishfika-blue:  #1990db;
 
-$link-color:        $swedishfika-pink;
+$link-color:        $swedishfika-link;
 $link-hover:        darken($link-color, 9%);
 
 /*

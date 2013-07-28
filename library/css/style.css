@@ -468,6 +468,249 @@ dd {
 .commentlist {
   list-style: none; }
 
+/******************************************************************
+Site Name: Swedish Fika
+Author: Ida, Johan, Alex, Simon
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/*.clearfix {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}*/
+/*********************
+TOOLS
+*********************/
+/** { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing:    border-box; 
+	box-sizing:         border-box; 
+}*/
+/*.image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+*/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('library/fonts/font-name.eot');
+    	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-style: italic; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid; }
+
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f; }
+
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8; }
+
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4; }
+
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2; }
+
+/*********************
+BORDER RADIUS
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include border-radius(4px 4px 0 0);
+*/
+/*********************
+TRANISTION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+BOX SHADOWS
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include box-shadow(inset 0 0 4px rgba(0,0,0,0.22));
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdue it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BUTTONS
+*********************/
+.button, .button:visited {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #50b3bc;
+  border-top-color: #66bdc4;
+  border-left-color: #66bdc4;
+  padding: 4px 12px;
+  color: white;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -border-radius: 4px;
+  border-radius: 4px;
+  background-color: #6ec0c7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#80c8ce), to(#6ec0c7));
+  background-image: -webkit-linear-gradient(top, #80c8ce, #6ec0c7);
+  background-image: -moz-linear-gradient(top, #80c8ce, #6ec0c7);
+  background-image: -o-linear-gradient(top, #80c8ce, #6ec0c7);
+  background-image: linear-gradient(to bottom, #80c8ce, #6ec0c7); }
+  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+    color: white;
+    border: 1px solid #50b3bc;
+    border-top-color: #419fa7;
+    border-left-color: #419fa7;
+    background-color: #5bb8c0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec0c7), to(#5bb8c0));
+    background-image: -webkit-linear-gradient(top, #6ec0c7, #5bb8c0);
+    background-image: -moz-linear-gradient(top, #6ec0c7, #5bb8c0);
+    background-image: -o-linear-gradient(top, #6ec0c7, #5bb8c0);
+    background-image: linear-gradient(to bottom, #6ec0c7, #5bb8c0); }
+  .button:active, .button:visited:active {
+    background-color: #80c8ce;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec0c7), to(#80c8ce));
+    background-image: -webkit-linear-gradient(top, #6ec0c7, #80c8ce);
+    background-image: -moz-linear-gradient(top, #6ec0c7, #80c8ce);
+    background-image: -o-linear-gradient(top, #6ec0c7, #80c8ce);
+    background-image: linear-gradient(to bottom, #6ec0c7, #80c8ce); }
+
+.blue-button, .blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  -webkit-box-shadow: inset 0 0 3px #59b3ec;
+  -moz-box-shadow: inset 0 0 3px #59b3ec;
+  -ms-box-shadow: inset 0 0 3px #59b3ec;
+  -o-box-shadow: inset 0 0 3px #59b3ec;
+  -box-shadow: inset 0 0 3px #59b3ec;
+  box-shadow: inset 0 0 3px #59b3ec; }
+  .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
+    border-color: #116396;
+    background-color: #1472ad;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+    background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+    background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+    background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+    background-image: linear-gradient(to bottom, #1784c9, #1472ad); }
+  .blue-button:active, .blue-button:visited:active {
+    background-color: #1990db;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+    background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+    background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+    background-image: -o-linear-gradient(top, #1681c4, #1990db);
+    background-image: linear-gradient(to bottom, #1681c4, #1990db); }
+
+/* GLOBAL 
+This is totally everywhere and especially for older antique devices 
+or devices with an extremely slow connection.
+*/
+html, body {
+  background-color: #fafafa;
+  color: #666565; }
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.42188%; }
+
+a {
+  color: #80c8ce; }
+
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
