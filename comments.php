@@ -51,15 +51,13 @@ The comments page for swedishfika
 
 <?php endif; ?>
 <?php if ( comments_open() ) : ?>
-<section id="respond" class="respond-form">
-	<h2><?php comment_form_title( __('Leave a Reply', 'swedishfikatheme'), __('Leave a Reply to %s', 'swedishfikatheme' )); ?></h3>
+<fieldset id="respond" class="respond-form">
+	<legend><?php comment_form_title( __('Leave a Reply', 'swedishfikatheme'), __('Leave a Reply to %s', 'swedishfikatheme' )); ?></legend>
 	<div id="cancel-comment-reply">
 		<p><?php cancel_comment_reply_link(); ?></p>
 	</div>
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-  	<div class="alert help">
-  		<p><?php printf( 'You must be %1$slogged in%2$s to post a comment.', '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
-  	</div>
+  	<p class="alert help"><?php printf( 'You must be %1$slogged in%2$s to post a comment.', '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
 	<?php else : ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<?php if ( is_user_logged_in() ) : ?>
@@ -92,5 +90,5 @@ The comments page for swedishfika
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>
 	<?php endif; // If registration required and not logged in ?>
-</section>
+</fieldset>
 <?php endif; // if you delete this the sky will fall on your head ?>
