@@ -117,7 +117,6 @@ function swedishfika_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>">
-			<header class="comment-author">
 			    <?php 
 			    /*
 			        this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
@@ -131,10 +130,9 @@ function swedishfika_comments($comment, $args, $depth) {
 			    ?>
 			    <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=65" class="avatar" height="65" width="65" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
 			    <!-- end custom gravatar call -->
-				<?php get_comment_author_link() ?>
+				<?php printf(__('<span class="comment-author">%s</span>'), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y g:i a'); ?> </a></time>
 				<?php edit_comment_link(__('(Edit)', 'swedishfikatheme'),'  ','') ?>
-			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
           		<p class="alert info"><?php _e('Your comment is awaiting moderation.', 'swedishfikatheme') ?></p>
 			<?php endif; ?>

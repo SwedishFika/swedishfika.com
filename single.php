@@ -7,7 +7,17 @@
 					<p class="byline vcard"><?php _e("Posted", "swedishfikatheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "swedishfikatheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&amp;</span> <?php _e("filed under", "swedishfikatheme"); ?> <?php the_category(', '); ?>.</p>
 				</header>
 				<div itemprop="articleBody">
+					<?php
+					$content = explode('<!--more-->', $post->post_content);
+					if( !empty($content[1]) ) :
+					?>
+					<div class="preamble">
+					<?php echo apply_filters('the_content', $content[0]); ?>
+					</div>
+					<?php echo apply_filters('the_content', $content[1]); ?>
+					<?php else : ?>
 					<?php the_content(); ?>
+					<?php endif; ?>
 				</div>
 				<footer class="article-footer">
 					<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
