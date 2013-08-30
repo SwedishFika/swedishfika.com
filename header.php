@@ -46,13 +46,13 @@
 		
 	</head>
 	<body <?php body_class(); ?>>
+		<div class="coffee">
 			<header class="higher-than-the-sky" role="banner">
 					<?php if ( $site_description && ( is_home() || is_front_page() ) ){ ?>
-						<h1><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/swedish-fika-logo.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
+						<h1><a href="<?php echo home_url(); ?>" class="go-home" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/swedish-fika-logo.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
 					<?php }else{ ?>
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="" alt="<?php bloginfo('name'); ?>" /></a>
+						<a href="<?php echo home_url(); ?>" class="go-home" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/swedish-fika-logo.png" alt="<?php bloginfo('name'); ?>" /></a>
 					<?php } ?>
-					<p><?php  bloginfo('description'); ?></p>
 					<nav role="navigation">
 						<?php swedishfika_main_nav(); ?>
 					</nav>

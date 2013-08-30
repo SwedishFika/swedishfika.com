@@ -7,5 +7,6 @@
 		
 		<!-- all js scripts are loaded in library/swedishfika.php -->
 		<?php wp_footer(); ?>
+		</div>
 	</body>
 </html> <!-- end page. let's have fika! -->

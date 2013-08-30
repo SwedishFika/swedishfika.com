@@ -1,12 +1,145 @@
+/******************************************************************
+
+Site Name: Swedish Fika
+Author: Johan, Ida, Simon and Alex
+
+Stylesheet: Global
+
+Targets all devices, even crappy ones, and all screen sizes. 
+No media queries since this is the most basic stylesheet of them all.
+After this one we progressively enhance up til the most sophisticated machine.  
+
+******************************************************************/
 html, body{
-	background-color: $main-bg;
 	color: $main-text;
+}
+html{
+	border-top: 4px solid $dark;
+	background-color: $main-bg;
+	font-size: calc-percent($base-size, 16);
 }
 body{
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: calc-percent(31, 1280);
 }
 a{
 	color: $link-color;
 }
+img{
+	max-width: 100%;
+	padding: 1em 0;
+}
+h1 {
+    font-size: 2em;
+    padding: 0.67em 0;
+    margin:0;
+    font-family: Serif;
+}
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}
+p,
+pre {
+    margin: 0 0 1em 0;
+}
+legend{
+	font-family: 'Jubilat', Georgia, serif;
+	@include fontsize(1.2, 1.4);
+}
+label,
+input, 
+textarea{
+	display: block;
+	@include fontsize(0.9, 0.8);
+}
+input, 
+textarea{
+	width: 100%;
+	@include box-sizing(border-box);
+	margin:0 0 calc-percent(13, 600);
+	border: 1px solid #e1e1e1;
+	border-radius: 3px;
+	padding: 5px;
+}
+textarea{
+	resize:none;
+}
+label{
+	font-weight: bold;
+	margin:0 0 calc-percent(10, 600); 
+}
+nav{
+	background: $global-head-bg;
+}
+nav ul{
+	padding: 2% 4%;
+	margin: 0
+}
+nav li{
+	list-style: none;
+}
+nav a{
+	padding: 10px 0;
+	display: block;
+	color: $light;
+	text-transform: uppercase;
+	text-decoration: none;
+	@include fontsize(0.7, 0.8);
+}
+nav a:hover,
+nav a:focus{
+	text-decoration: underline;
+}
+aside{
+	padding: 0 calc-percent(40, 800) calc-percent(40, 800) calc-percent(40, 800);
+}
+article h1{
+	text-align: center;
+	color: $global-header;
+}
+
+.skip,
+.navigate-now {
+    display: block;
+    color: $light;
+    padding:2% 4%;
+    @include fontsize(0.7, 0.8);
+    background-color: $global-head-bg;
+    text-decoration: none;
+}
+.skip:hover,
+.skip:focus,
+.navigate-now:hover,
+.navigate-now:focus{
+	text-decoration: underline;
+}
+.go-home{
+	display: block;
+	text-align: center;
+}
+.higher-than-the-sky{
+	background-color: $global-head-bg;
+	color: $light;
+}
+

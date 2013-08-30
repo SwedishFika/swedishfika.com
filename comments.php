@@ -1,8 +1,8 @@
+<div class="feedback">
 <?php
 /*
 The comments page for swedishfika
 */
-
 // Do not delete these lines
   if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
     die ('Please do not load this page directly. Thanks!');
@@ -92,3 +92,4 @@ The comments page for swedishfika
 	<?php endif; // If registration required and not logged in ?>
 </fieldset>
 <?php endif; // if you delete this the sky will fall on your head ?>
+</div>
