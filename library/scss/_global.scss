@@ -64,7 +64,6 @@ pre {
     margin: 0 0 1em 0;
 }
 legend{
-	font-family: 'Jubilat', Georgia, serif;
 	@include fontsize(1.2, 1.4);
 }
 label,
@@ -95,9 +94,6 @@ nav{
 nav ul{
 	padding: 2% 4%;
 	margin: 0
-}
-nav li{
-	list-style: none;
 }
 nav a{
 	padding: 10px 0;
@@ -142,4 +138,3 @@ article h1{
 	background-color: $global-head-bg;
 	color: $light;
 }
-

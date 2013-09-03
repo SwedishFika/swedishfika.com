@@ -585,7 +585,6 @@ pre {
   margin: 0 0 1em 0; }
 
 legend {
-  font-family: "Jubilat", Georgia, serif;
   font-size: 24px;
   line-height: 28px;
   font-size: 1.2rem;
@@ -625,9 +624,6 @@ nav {
 nav ul {
   padding: 2% 4%;
   margin: 0; }
-
-nav li {
-  list-style: none; }
 
 nav a {
   padding: 10px 0;
@@ -706,6 +702,9 @@ and will be used across all viewports.
     font-family: "nimbus-sans", Helvetica, sans-serif;
     font-weight: lighter; }
 
+  legend {
+    font-family: "Jubilat", Georgia, serif; }
+
   /*@group Top Header */
   .higher-than-the-sky {
     padding: 2.42188%; }
@@ -759,6 +758,23 @@ and will be used across all viewports.
     text-align: right; }
 
   /*@end Framework*/
+  /*@group Start*/
+  .home h1 {
+    font-family: "nimbus-sans", Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: left;
+    padding: 0;
+    margin: 0; }
+
+  .home .entry-content {
+    float: none;
+    padding: 0;
+    border: none; }
+
+  /*@end Start*/
   /*@group Article*/
   /*@group Artcle Content*/
   .headline {
@@ -766,8 +782,7 @@ and will be used across all viewports.
     color: white; }
 
   .entry-content {
-    padding: 0 5%;
-    /*padding: calc-percent(31, 1280);*/ }
+    padding: 0 5%; }
 
   .published {
     text-align: center;
@@ -985,9 +1000,15 @@ you can add resource intensive styles.
     top: 88px;
     right: 30px; }
 
+  nav ul {
+    padding: 0; }
+
   nav li {
     float: left;
-    margin-left: 20px; }
+    padding-left: 20px; }
+
+  nav a {
+    float: left; }
 
   .navigate-now {
     display: none; }

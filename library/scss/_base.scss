@@ -22,6 +22,9 @@ and will be used across all viewports.
 		font-family: "nimbus-sans", Helvetica, sans-serif;
 		font-weight: lighter;
 	}
+	legend{
+		font-family: 'Jubilat', Georgia, serif;
+	}
 
 	/*@group Top Header */
 	.higher-than-the-sky{
@@ -69,6 +72,21 @@ and will be used across all viewports.
 	.text-right  { text-align: right; }
 	/*@end Framework*/
 
+	/*@group Start*/
+	.home h1{
+		font-family: "nimbus-sans", Helvetica, sans-serif;
+		@include fontsize(1.2, 1.4);
+		text-align: left;
+		padding: 0;
+		margin: 0;
+	}
+	.home .entry-content{
+		float: none;
+		padding: 0;
+		border: none;
+	}
+	/*@end Start*/	
+
 	/*@group Article*/
 	/*@group Artcle Content*/
 	.headline{
@@ -77,7 +95,6 @@ and will be used across all viewports.
 	}
 	.entry-content{
 		padding: 0 calc-percent(40, 800);
-		/*padding: calc-percent(31, 1280);*/
 	}
 	.published{
 		text-align: center;

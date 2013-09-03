@@ -53,7 +53,4 @@
 					<?php }else{ ?>
 						<a href="<?php echo home_url(); ?>" class="go-home" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/swedish-fika-logo.png" alt="<?php bloginfo('name'); ?>" /></a>
 					<?php } ?>
-					<nav role="navigation">
-						<?php swedishfika_main_nav(); ?>
-					</nav>
 			</header> <!-- end header -->
