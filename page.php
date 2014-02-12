@@ -1,28 +1,59 @@
-<?php get_header(); ?>
-	<main id="main" role="main">
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">	
-			    <header class="article-header">
-				    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-				    <p class="byline vcard"><?php _e("Posted", "swedishfikatheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "swedishfikatheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span>.</p>
-			    </header> <!-- end article header -->
-			    <section class="entry-content" itemprop="articleBody">
-				    <?php the_content(); ?>
-				</section> <!-- end article section -->
-			    <footer class="article-footer">
-				    <?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
-			    </footer> <!-- end article footer -->
-			    <?php comments_template(); ?>
-		    </article> <!-- end article -->
-		    <?php endwhile; else : ?>
-			    <article id="post-not-found" class="hentry clearfix">
-			    	<h1><?php _e("Oops, Post Not Found!", "swedishfikatheme"); ?></h1>
-			    	<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "swedishfikatheme"); ?></p>
-			    	<footer class="article-footer">
-			    	    <p><?php _e("This is the error message in the page.php template.", "swedishfikatheme"); ?></p>
-			    	</footer>
-			    </article>
-		    <?php endif; ?>
-		</main> <!-- end #main -->
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+get_header();
+?>
+<div id="content-container">
+	<div id="first-column">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div id="main-entry" class="page">
+			<h1><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<div class="article-text">
+				<?php the_content(__('Continue reading...')); ?>
+			</div>
+		</div>
+    <?php endwhile; else: ?>
+    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+    <?php endif; ?>
+		
+	</div>
+	<div id="second-column">
+		<h4>Sections</h4>
+		<ul id="sections">
+			<?php wp_list_categories('title_li='); ?> 
+		</ul>
+    
+		<?php if (function_exists('recent_posts')) { ?>
+		<h4>Recent Entries</h4>
+			<dl>	
+			<?php recent_posts(); ?>
+			</dl>
+		<?php } ?>    
+        
+		<?php if (function_exists('get_recent_comments')) { ?>
+		<h4><?php _e('Recent Comments'); ?></h4>
+		    <dl id="recent-comments">
+				<?php get_recent_comments(); ?>
+		    </dl>
+		 <?php } ?> 
+		 
+	</div>
+	<div id="third-column">
+		<h4>About</h4>
+		<p>
+			Swedish fika is a site where we can express our ideas and thoughts about web design and development.
+		</p>
+		<h4>Subscribe</h4>
+		<p>
+			You can subscribe to our <a href="/feed">RSS feed</a> as well as our <a href="/feed/atom">Atom feed</a>.
+		</p>
+		<h4>Recommended Books</h4>
+		<?php include('recommended_books.php'); ?>
+		
+		<?php 
+			// Not so dynamic yet =)
+			dynamic_sidebar() 
+		?>
+		
+		<h4>Our Latest Bookmarks</h4>
+      <?php delicious_bookmarks("swedishfika", 5, true, false, false,'',true); ?>
+	</div>
+ <?php get_footer(); ?>

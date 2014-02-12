@@ -9,32 +9,36 @@ Author: Alexander Radsby & Simon Kjellberg
 /* RESET 
 -----------------------------------------------------------------------------*/
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,p,blockquote,th,td {margin:0;padding:0;}
-table {border-collapse:collapse;border-spacing:0;}
-fieldset,img {border:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
 ol,ul {list-style:none;}
 caption,th {text-align:left;}
-h1,h2,h3,h4,h5,h6 {font-size:100%;}
-q:before,q:after {content:'';}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
 
 /* Globals 
 -----------------------------------------------------------------------------*/
 
-body {
+body{
 	background: #eadfcb url(body-bg.jpg) top center no-repeat;
 	padding-top: 50px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: small;
 }
 
-code { 
+code{ 
 	border: 1px solid #ccc; 
 	padding: 15px 10px; 
-    line-height: 11px;
+        line-height: 11px;
 	display:  block; 
 	font-size: 100%;
 	background: #fefde0;
-	white-space:pre;
+        white-space:pre
+}
+
+pre{ 
+
 }
 
 div#first-column h3 {
@@ -73,126 +77,135 @@ div#container{
 	height: 400px;
 }
 
-.home h1 {
-	text-indent: -9999px;
-}
-
-
 /* Banner/menu-section 
 -----------------------------------------------------------------------------*/
 
-div#menu-container {
+div#menu-container{
 	width: 955px;
 	height: 74px;
 	float: left;
 }
 
-div#menu-container div#logo {
+div#menu-container div#logo{
 	width: 243px;
 	height: 74px;
 	background: url(logo.jpg) top left no-repeat;
 	float: left;
-	text-indent: -999px;
 }
 
-div#menu-container div#menu {
+div#menu-container div#logo h1{
+	display: none;
+}
+
+div#menu-container div#menu{
 	width: 476px;
-	padding-top: 28px;	
+	padding-top: 28px;
 	float: left;
 }
 
-div#menu-container div#menu ul {
+div#menu-container div#menu ul{
 	width: 456px;
 	height: 46px;
 	background: #3d3c3c;
-	float: left;	
-	position:relative;	
-	padding-left:20px;
-}
-
-div#menu-container div#menu ul li {	
-	font-family: Georgia, "Times New Roman", Times, serif;	
-	position:absolute;	
-	display: block;
 	float: left;
-	height:46px;
-	width:71px;
-	background:url(menu.gif) 0 0 no-repeat;
+	padding-left: 20px;
 }
 
-div#menu-container div#menu ul li a {
+div#menu-container div#menu ul li{
+	display: inline;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	float: left;
+}
+
+div#menu-container div#menu ul li a{
 	text-decoration: none;
 	color: #fff;
 	height: 46px;
-	width:71px;
 	float: left;
 	text-transform: lowercase;
 	font-weight:bold;
 	letter-spacing:-1px;
-	overflow: hidden;
 }
 
-div#menu-container div#menu ul li.nav_home {
+div#menu-container div#menu ul li a.nav_home {
 	text-indent: -9999px;
-	background-position: 0px -46px;	left:20px;
+	background:url(home_off.gif) top left no-repeat;
+	height: 46px;
+	width: 71px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_home a:hover, 
-div#menu-container div#menu ul li.nav_home a:active, 
-div#menu-container div#menu ul li.nav_home a:focus, 
-body.home div#menu-container div#menu ul li.nav_home a {
+div#menu-container div#menu ul li a.nav_home:hover, body.home div#menu-container div#menu ul li a.nav_home{
 	text-indent: -9999px;
-	background:url(menu.gif) 0px 0px no-repeat;
+	background:url(home_on.gif) top left no-repeat;
+	height: 46px;
+	width: 71px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_about {
+div#menu-container div#menu ul li a.nav_about{
 	text-indent: -9999px;
-	background-position:-71px -46px;	left: 91px;
+	background:url(about_off.gif) top left no-repeat;
+	height: 46px;
+	width: 71px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_about a:hover, 
-body.about div#menu-container div#menu ul li.nav_about a {
+div#menu-container div#menu ul li a.nav_about:hover, body.about div#menu-container div#menu ul li a.nav_about{
 	text-indent: -9999px;
-	background:url(menu.gif) -71px 0px no-repeat;
+	background:url(about_on.gif) top left no-repeat;
+	height: 46px;
+	width: 71px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_archive {
+div#menu-container div#menu ul li a.nav_archive {
 	text-indent: -9999px;
-	background-position:-142px -46px;	left: 162px;
+	background:url(archive_off.gif) top left no-repeat;
+	height: 46px;
+	width: 81px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_archive a:hover, 
-body.archives div#menu-container div#menu ul li.nav_archive a {
+div#menu-container div#menu ul li a.nav_archive:hover, body.archives div#menu-container div#menu ul li a.nav_archive{
 	text-indent: -9999px;
-	background:url(menu.gif) -142px 0px no-repeat;
+	background:url(archive_on.gif) top left no-repeat;
+	height: 46px;
+	width: 81px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_contact {
+div#menu-container div#menu ul li a.nav_contact {
 	text-indent: -9999px;
-	background-position: -213px -46px;	left: 243px;
+	background:url(contact_off.gif) top left no-repeat;
+	height: 46px;
+	width: 71px;
+	overflow:hidden;
 }
 
-div#menu-container div#menu ul li.nav_contact a:hover, 
-body.contact div#menu-container div#menu ul li.nav_contact a {
+div#menu-container div#menu ul li a.nav_contact:hover, body.contact div#menu-container div#menu ul li a.nav_contact{
 	text-indent: -9999px;
-	background:url(menu.gif) -213px 0px no-repeat;
+	background:url(contact_on.gif) top left no-repeat;
+	height: 46px;
+	width: 71px;
+	overflow:hidden;
 }
 
-div#menu-container div#search {
+div#menu-container div#search{
 	padding-top: 28px;
 	width: 236px;
 	float: left;
 	height: 46px;
 }
 
-div#menu-container div#search form {
+div#menu-container div#search form{
 	width: 236px;
 	height: 35px;
 	background: #3d3c3c;
 	padding-top: 11px;
 	float: left;
 }
-div#menu-container div#search form div {
+div#menu-container div#search form div{
 	background: #494949 url(search-bg.jpg) center left no-repeat;
 	background-position: 5px;
 	border: 1px solid #535353;
@@ -201,7 +214,7 @@ div#menu-container div#search form div {
 	float: left;
 }
 
-div#menu-container div#search form div input {
+div#menu-container div#search form div input{
 	width: 198px;
 	background: #494949;
 	padding-left: 5px;
@@ -213,7 +226,7 @@ div#menu-container div#search form div input {
 /* First column 
 -----------------------------------------------------------------------------*/
 
-div#content-container {
+div#content-container{
 	width: 935px;
 	background: #fff;
 	background-image: url(border.jpg);
@@ -223,35 +236,23 @@ div#content-container {
 	padding: 10px;
 }
 
-div#first-column {
+div#first-column{
 	width: 456px;
 	padding: 0 15px 0 0;
 	float: left;
 }
 
-div#first-column img {
+div#first-column img{
 	padding-bottom: 10px;
 }
 
-div#first-column img.big-image {
-	border:1px solid #cfd0cb;
-	padding: 4px;
-	width: 446px;
-	margin-bottom: 10px;
-}
-
-div#first-column a.big-image-link, 
-div#first-column a.big-image-link:hover {
-	border: none;
-}
-
-div.datebox {
+div.datebox{
 	background: #92a966 url(datebox-bottom.gif) bottom left no-repeat;
 	width: 47px;
 	height: 44px;
 	float: right;
 }
-div.datebox div.date {
+div.datebox div.date{
 	padding: 6px 0 0 0;
 	background: url(datebox-top.gif) top left no-repeat;
 	color: #fff;
@@ -263,7 +264,7 @@ div.datebox div.date {
 	font-size: 100%;
 }
 
-div.datebox div.month {
+div.datebox div.month{
 	color: #fff;
 	display: block;
 	font-weight: normal;
@@ -275,8 +276,8 @@ div.datebox div.month {
 	font-size: 90%;
 }
 
-div#content-container p {
-	width: 456px;
+div#content-container p{
+	width: 379px;
 	line-height: 18px;
 	clear:both;
 	color: #363636;
@@ -284,14 +285,14 @@ div#content-container p {
 	text-align: left;
 }
 
-div#main-entry {
+div#main-entry{
 	width: 456px;
 	border-bottom: 2px solid #edf1e5;
 	padding-bottom: 20px;
 	float: left;
 }
 
-div.main-entry {
+div.main-entry{
 	width: 456px;
 	border-bottom: 2px solid #edf1e5;
 	padding-bottom: 20px;
@@ -310,7 +311,7 @@ div.main-entry li, div#main-entry li {
     margin-left: 30px;
 }
 
-div.article-top {
+div.article-top{
 	margin: 0;
 	padding: 0 0 10px 0;
 }
@@ -326,7 +327,7 @@ div.article-top {
 	width: 456px !important;
 }
 
-div.entry {
+div.entry{
 	width: 456px;
 	border-bottom: 2px solid #edf1e5;
 	padding-bottom: 20px;
@@ -334,8 +335,7 @@ div.entry {
 	float: left;
 }
 
-div#first-column h2, 
-div#first-column h1 {
+div#first-column h2{
 	padding: 5px 0 10px 0;
 	width: 359px;
 	float: left;
@@ -362,87 +362,40 @@ div#first-column a {
 	text-decoration: none;
 }
 
-div#first-column h2 a, 
-div#first-column h1 a {
+div#first-column h2 a {
 	color: #57371b;
 	border-bottom: none;
 	text-decoration: none;
 }
 
-div#first-column h1 a:hover,
 div#first-column h2 a:hover {
 	color: #496189;
 	border-bottom: none;
 	text-decoration: none;
 }
 
-div#first-column div.main-content h3 {	
-	padding-top:20px;
-	width:379px;
-	float:left;
-}
-
-div#first-column ul {
-	padding: 0 0 0 15px;
-	margin-bottom: 15px;
-}
-
-div#first-column ul li {
-	margin: 0 0 5px 0;
-}
-
-div#first-column a:hover {
+div#first-column a:hover{
 	color: #496189;
 	border-bottom: 1px dotted #496189;
 	text-decoration: none;
 }
 
-div#first-column div.archive-month {
+div#first-column div.archive-month{
 	margin: 0;
 	padding: 0;
-}
-
-div#first-column div.car-container ul li {
-	list-style:none;
-}
-
-div#first-column div.car-container ul li span.car-yearmonth {
-	font-size:120%;	
-	margin:20px 0px 3px 0px;
-	display:block;	
-	font-weight:bold;	
-	color:#57371B;
-}
-
-div.navigation {
-	width: 456px;
-	float:left;
-}
-
-div.navigation div.newer {
-	float:right;
-	width:228px;
-	text-align:right;
-}
-
-div.navigation div.older {
-	float:left;	
-	width:228px;
 }
 
 /* Second column 
 -----------------------------------------------------------------------------*/
 
-div#second-column {
+div#second-column{
 	width: 208px;
 	padding: 0 15px 0 15px;
 	float: left;
 	border-right: 1px solid #e4ebd8;
 }
 
-div#second-column h2, 
-div#second-column h3, 
-div#second-column h4 {
+div#second-column h2{
 	padding: 0 0 5px 0;
 	border-bottom: 1px solid #e4ebd8;
 	width: 208px;
@@ -455,17 +408,17 @@ div#second-column h4 {
 	letter-spacing: -1px;
 }
 
-div#second-column ul#sections {
+div#second-column ul#sections{
 	float: left;
 	width: 208px;
 	padding-bottom: 20px;
 }
 
-div#second-column ul#sections li {
+div#second-column ul#sections li{
 	float: left;
 }
 
-div#second-column ul#sections li a {
+div#second-column ul#sections li a{
 	background: url(tag.gif) center left no-repeat;
 	background-position: 7px;
 	padding: 10px 0 10px 32px;
@@ -477,7 +430,7 @@ div#second-column ul#sections li a {
 	font-weight: bold;
 }
 
-div#second-column ul#sections li.even a {
+div#second-column ul#sections li.even a{
 	background: #f7faf2 url(tag-even.gif) center left no-repeat;
 	background-position: 7px;
 	padding: 10px 0 10px 32px;
@@ -487,17 +440,17 @@ div#second-column ul#sections li.even a {
 	float: left;
 	width: 173px;
 }
-div#second-column ul#sections a:hover, div#second-column ul#sections  li.even a:hover {
+div#second-column ul#sections a:hover, div#second-column ul#sections  li.even a:hover{
 	color: #505f35;
 }
 
-div#second-column dl {
+div#second-column dl{
 	float: left;
 	padding-bottom: 20px;
 	width: 100%;
 }
 
-div#second-column dl dt {
+div#second-column dl dt{
 	color: #4869a6;
 	font-family: Arial;
 	padding: 10px 0 1px 0;
@@ -510,11 +463,11 @@ div#second-column dl dt {
 
 }
 
-div#second-column dl dt a {
+div#second-column dl dt a{
 	color: #4869a6;
 }
 
-div#second-column dl dd {
+div#second-column dl dd{
 	color: #454545;
 	font-family: Arial;
 	font-size: 80%;
@@ -526,7 +479,7 @@ div#second-column dl dd {
 	border-bottom: 1px solid #e4ebd8;
 }
 
-div#second-column dl dt.even {
+div#second-column dl dt.even{
 	color: #4869a6;
 	font-family: Arial;
 	padding: 10px 0 1px 0;
@@ -538,7 +491,7 @@ div#second-column dl dt.even {
 	padding: 10px 10px 0 7px;
 }
 
-div#second-column dl dd.even {
+div#second-column dl dd.even{
 	color: #454545;
 	font-family: Arial;
 	font-size: 80%;
@@ -551,23 +504,23 @@ div#second-column dl dd.even {
 	border-bottom: 1px solid #e4ebd8;
 }
 
-div#second-column dl dt a {
+div#second-column dl dt a{
 	color: #4869a6;
 	text-decoration: none;
 }
 
-div#second-column dl dd a {
+div#second-column dl dd a{
 	color: #4869a6;
 }
 
-div#second-column dl#recent-comments{	
+div#second-column dl#recent-comments{
 	float: left;
 	padding-bottom: 0;
 }
 
-div#second-column dl#recent-comments dt {
-	color: #454545;	
-	font-family: Arial, Verdana, Sans-serif;	
+div#second-column dl#recent-comments dt{
+	color: #454545;
+	font-family: Arial;
 	padding: 15px 0 5px 7px;
 	font-weight: normal;
 	letter-spacing: -1px;
@@ -575,21 +528,21 @@ div#second-column dl#recent-comments dt {
 	width: 191px;
 }
 
-div#second-column dl#recent-comments dt span {
-	color: #4869a6;	
+div#second-column dl#recent-comments dt span{
+	color: #4869a6;
 	font-weight: bold;
 }
 
-div#second-column dl#recent-comments dt span a {
-	color: #4869a6;	
+div#second-column dl#recent-comments dt span a{
+	color: #4869a6;
 	text-decoration: none;
 }
 
-div#second-column dl#recent-comments dd {
-	color: #454545;	
+div#second-column dl#recent-comments dd{
+	color: #454545;
 	padding: 0 0 15px 7px;
-	font-family: Arial;	
-	font-size: 90%;	
+	font-family: Arial;
+	font-size: 90%;
 	float: left;
 	clear: both;
 	text-transform: none;
@@ -597,9 +550,9 @@ div#second-column dl#recent-comments dd {
 	border-bottom: 1px solid #e4ebd8;
 }
 
-div#second-column dl#recent-comments dt.even {
-	color: #454545;	
-	font-family: Arial, Verdana, Sans-serif;
+div#second-column dl#recent-comments dt.even{
+	color: #454545;
+	font-family: Arial;
 	padding: 15px 0 5px 7px;
 	font-weight: normal;
 	letter-spacing: -1px;
@@ -608,10 +561,10 @@ div#second-column dl#recent-comments dt.even {
 	background: #f7faf2;
 }
 
-div#second-column dl#recent-comments dd.even {	
-	color: #454545;	
+div#second-column dl#recent-comments dd.even{
+	color: #454545;
 	padding: 0 0 15px 7px;
-	font-family: Arial, Verdana, Sans-serif;
+	font-family: Arial;
 	font-size: 90%;
 	float: left;
 	clear: both;
@@ -624,27 +577,25 @@ div#second-column dl#recent-comments dd.even {
 /* Third column 
 -----------------------------------------------------------------------------*/
 
-div#third-column {
+div#third-column{
 	width: 210px;
 	float: left;
 	padding: 0 0 0 15px;
 }
 
-div#third-column a {
+div#third-column a{
 	color: #4869a6;
 }
 
 
-div#third-column p {
+div#third-column p{
 	width: 205px;
 	float: left;
 	padding: 10px 0;
 	text-align: left;
 }
 
-div#third-column h2, 
-div#third-column h3, 
-div#third-column h4 {
+div#third-column h2{
 	padding: 0 0 5px 0;
 	border-bottom: 1px solid #e4ebd8;
 	width: 205px;
@@ -657,54 +608,28 @@ div#third-column h4 {
 	letter-spacing: -1px;
 }
 
-div#third-column h2 a, 
-div#third-column h3 a {
-	padding: 0;
-	margin: 0;
-	font-family: Georgia;
-	font-style: italic;
-	color: #57371b;
-	font-weight: normal;
-	letter-spacing: -1px;
-	text-decoration: none;
-}
-
-div#third-column ul.tweets {
-	font-size:90%;
-	line-height:18px;
-	float:left;
-	padding-bottom: 10px;
-	width: 210px;
-}
-
-div#third-column ul.tweets li{
-	margin: 0;
-	color:#454545;
-	padding: 10px 0 0 0;
-}
-
 div#third-column ul#books{
 	float: left;
 	padding-bottom: 10px;
 }
 
-div#third-column ul#books li {
+div#third-column ul#books li{
 	float: left;
 	width: 205px;
 	padding: 10px 0 0 0;
 }
 
-div#third-column ul#books li img {
+div#third-column ul#books li img{
 	float: left;
 	margin: 0 10px 0 0;
 }
 
-div#third-column ul#books li a {
+div#third-column ul#books li a{
 	color: #4869a6;
 	text-decoration: none;
 }
 
-div#third-column ul.delicious {
+div#third-column dl#bookmarks{
 	width: 205px;
 	font-size: 90%;
 	line-height: 18px;
@@ -712,18 +637,18 @@ div#third-column ul.delicious {
 	float: left;
 }
 
-div#third-column ul.delicious li.delicious-item {
+div#third-column dl#bookmarks dt{
 	float: left;
 	padding: 10px 0 0 0;
 	width: 205px;
 }
 
-div#third-column ul.delicious li.delicious-item a {
+div#third-column dl#bookmarks dt a{
 	color: #4869a6;
 	text-decoration: none;
 }
 
-div#third-column ul.delicious li {
+div#third-column dl#bookmarks dd{
 	color: #454545;
 	padding: 7px 0 0 0;
 	float: left;
@@ -731,7 +656,7 @@ div#third-column ul.delicious li {
 
 /* Footer */
 
-div#footer {
+div#footer{
 	border-top: 2px solid #d3d8ca; 
 	background: #eff4e6;
 	margin-top: 10px;
@@ -741,35 +666,35 @@ div#footer {
 	width: 905px;
 }
 
-div#footer div#footer-left {
+div#footer div#footer-left{
 	width: 609px;
 	float: left;
 }
 
-div#footer div#footer-left p {
+div#footer div#footer-left p{
 	width: 609px;
 	color: #787878;
 	line-height: 20px;
 	font-size: 90%;
 }
 
-div#footer div#footer-left p a {
+div#footer div#footer-left p a{
 	color: #3e3e3e;
 	text-decoration: none;
 }
 
-div#footer div#footer-left p.copyright {
+div#footer div#footer-left p.copyright{
 	color: #303030;
 	padding: 0 0 10px 0;
 	font-size: 90%;
 }
 
-div#footer div#footer-right {
+div#footer div#footer-right{
 	width: 296px;
 	float: left;
 }
 
-div#footer div#footer-right p {
+div#footer div#footer-right p{
 	width: 291px;
 	float: left;
 	margin: 0;
@@ -779,12 +704,12 @@ div#footer div#footer-right p {
 	text-align: right;
 }
 
-div#footer div#footer-right p a {
+div#footer div#footer-right p a{
 	color: #475a22;
 	text-decoration: none;
 }
 
-#bottom {
+#bottom{
 	height: 20px;
 	width: 955px;
 	float: left;
@@ -807,7 +732,7 @@ div#comment-form input {
 	font-size: 100%;
 }
 
-textarea {
+textarea{
 	border: #e8e8e8 1px solid;
 	padding: 0.3em;
 	font-family: Arial;
@@ -851,15 +776,11 @@ div.comment-wrapper {
 	padding-top: 10px;
 }
 
-div.admin-comment div.message {
-	background-color:#EFF4E6;
-}
-
 div.comment-meta {
 	float: left;
 }
 
-div#first-column div.comment-meta a {
+div#first-column div.comment-meta a{
 	border-bottom: none;
 }
 
@@ -873,7 +794,7 @@ div.message {
 	background: #fff8ea;
 }
 
-div.message p {
+div.message p{
 	width: 387px !important;
 }
 
@@ -896,6 +817,10 @@ div.comment-post {
 	font-size: 120%;
 }
 
+.postspermonth {
+	
+}
+
 .postspermonth li{
 	padding-left: 10px;
 	margin: 0.3em;
@@ -904,63 +829,12 @@ div.comment-post {
 /* Overall styles 
 -----------------------------------------------------------------------------*/
 
-.hidden {
+.hidden{
 	display: none;
 }
-.block {
+.block{
 	display: block;
 }
-.clear {
+.clear{
 	clear: both;
-}
-
-
-/*code styles*/
-pre {
-	width:439px;
-	float:left;
-	background:#FEFDE0 none repeat scroll 0;
-	border:1px solid #CCCCCC;
-	display:block;
-	font-size:100%;
-	line-height:11px;
-	padding:15px 10px;
-	white-space:pre;
-}
-
-ul.post-list {
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	margin-left:0;
-	padding-left:5px;
-	text-indent:-8px;
-	padding-bottom:15px;
-}
-
-ul.post-list li {
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	line-height: 1.5;
-	padding-bottom:10px;
-	color:#363636;
-	margin-left:20px;
-}
-
-ol.post-list {
-	width:379px;
-	float:left;
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:decimal;
-	padding:10px 0px 15px 5px;
-}
-
-ol.post-list li {
-	list-style-image:none;
-	list-style-position:outside;
-	line-height: 1.5;
-	padding-bottom:10px;
-	color:#363636;
 }
