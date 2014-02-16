@@ -21,7 +21,7 @@ q:before,q:after {content:'';}
 -----------------------------------------------------------------------------*/
 
 body {
-	background: #eadfcb url(body-bg.jpg) top center no-repeat;
+	background: #eadfcb url(../img/body-bg.jpg) top center no-repeat;
 	padding-top: 50px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: small;
@@ -90,7 +90,7 @@ div#menu-container {
 div#menu-container div#logo {
 	width: 243px;
 	height: 74px;
-	background: url(logo.jpg) top left no-repeat;
+	background: url(../img/logo.jpg) top left no-repeat;
 	float: left;
 	text-indent: -999px;
 }
@@ -117,7 +117,7 @@ div#menu-container div#menu ul li {
 	float: left;
 	height:46px;
 	width:71px;
-	background:url(menu.gif) 0 0 no-repeat;
+	background:url(../img/menu.gif) 0 0 no-repeat;
 }
 
 div#menu-container div#menu ul li a {
@@ -142,7 +142,7 @@ div#menu-container div#menu ul li.nav_home a:active,
 div#menu-container div#menu ul li.nav_home a:focus, 
 body.home div#menu-container div#menu ul li.nav_home a {
 	text-indent: -9999px;
-	background:url(menu.gif) 0px 0px no-repeat;
+	background:url(../img/menu.gif) 0px 0px no-repeat;
 }
 
 div#menu-container div#menu ul li.nav_about {
@@ -153,7 +153,7 @@ div#menu-container div#menu ul li.nav_about {
 div#menu-container div#menu ul li.nav_about a:hover, 
 body.about div#menu-container div#menu ul li.nav_about a {
 	text-indent: -9999px;
-	background:url(menu.gif) -71px 0px no-repeat;
+	background:url(../img/menu.gif) -71px 0px no-repeat;
 }
 
 div#menu-container div#menu ul li.nav_archive {
@@ -164,7 +164,7 @@ div#menu-container div#menu ul li.nav_archive {
 div#menu-container div#menu ul li.nav_archive a:hover, 
 body.archives div#menu-container div#menu ul li.nav_archive a {
 	text-indent: -9999px;
-	background:url(menu.gif) -142px 0px no-repeat;
+	background:url(../img/menu.gif) -142px 0px no-repeat;
 }
 
 div#menu-container div#menu ul li.nav_contact {
@@ -175,7 +175,7 @@ div#menu-container div#menu ul li.nav_contact {
 div#menu-container div#menu ul li.nav_contact a:hover, 
 body.contact div#menu-container div#menu ul li.nav_contact a {
 	text-indent: -9999px;
-	background:url(menu.gif) -213px 0px no-repeat;
+	background:url(../img/menu.gif) -213px 0px no-repeat;
 }
 
 div#menu-container div#search {
@@ -193,7 +193,7 @@ div#menu-container div#search form {
 	float: left;
 }
 div#menu-container div#search form div {
-	background: #494949 url(search-bg.jpg) center left no-repeat;
+	background: #494949 url(../img/search-bg.jpg) center left no-repeat;
 	background-position: 5px;
 	border: 1px solid #535353;
 	padding: 3px 0 3px 20px;
@@ -216,7 +216,7 @@ div#menu-container div#search form div input {
 div#content-container {
 	width: 935px;
 	background: #fff;
-	background-image: url(border.jpg);
+	background-image: url(../img/../img/border.jpg);
 	background-repeat: repeat-y;
 	background-position: 480px 10px;
 	float: left;
@@ -246,14 +246,14 @@ div#first-column a.big-image-link:hover {
 }
 
 div.datebox {
-	background: #92a966 url(datebox-bottom.gif) bottom left no-repeat;
+	background: #92a966 url(../img/datebox-bottom.gif) bottom left no-repeat;
 	width: 47px;
 	height: 44px;
 	float: right;
 }
 div.datebox div.date {
 	padding: 6px 0 0 0;
-	background: url(datebox-top.gif) top left no-repeat;
+	background: url(../img/datebox-top.gif) top left no-repeat;
 	color: #fff;
 	display: block;
 	float: left;
@@ -466,7 +466,7 @@ div#second-column ul#sections li {
 }
 
 div#second-column ul#sections li a {
-	background: url(tag.gif) center left no-repeat;
+	background: url(../img/tag.gif) center left no-repeat;
 	background-position: 7px;
 	padding: 10px 0 10px 32px;
 	color: #6d7e4e;
@@ -478,7 +478,7 @@ div#second-column ul#sections li a {
 }
 
 div#second-column ul#sections li.even a {
-	background: #f7faf2 url(tag-even.gif) center left no-repeat;
+	background: #f7faf2 url(../img/tag-even.gif) center left no-repeat;
 	background-position: 7px;
 	padding: 10px 0 10px 32px;
 	color: #6d7e4e;
