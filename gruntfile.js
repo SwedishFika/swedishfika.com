@@ -7,14 +7,17 @@ module.exports = function (grunt) {
                 style: 'expanded'
               },
               files: {
-                'style.css': 'assets/scss/style.scss'
+                'assets/css/style.max.css': 'assets/scss/style.scss'
               }
             }
         },
         cssmin: {
-          combine: {
+          add_banner: {
+            options: {
+              banner: '/* \n Theme Name: Swedish Fika\n Theme URI: http://www.swedishfika.com\n Description: The first version of Swedish Fika\n Version: 1.0\n Author: Alexander Radsby & Simon Kjellberg\n */'
+            },
             files: {
-              'assets/css/style.css': ['css/style.css']
+              'style.css': ['assets/css/style.max.css']
             }
           }
         },
@@ -27,7 +30,7 @@ module.exports = function (grunt) {
           },
           css: {
             files: [
-            'assets/css/style.min.css'
+            'assets/css/**/*.css'
             ],
             tasks: ['cssmin']
           }
@@ -38,6 +41,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task
     // grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
