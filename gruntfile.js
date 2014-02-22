@@ -1,6 +1,23 @@
 module.exports = function (grunt) {
 	'use strict';
     grunt.initConfig({
+        sass: {
+            dist: {
+              options: {
+                style: 'expanded'
+              },
+              files: {
+                'style.css': 'assets/scss/style.scss'
+              }
+            }
+        },
+        cssmin: {
+          combine: {
+            files: {
+              'assets/css/style.css': ['css/style.css']
+            }
+          }
+        },
         watch: {
           sass: {
             files: [
@@ -14,25 +31,7 @@ module.exports = function (grunt) {
             ],
             tasks: ['cssmin']
           }
-        },
-        sass: {
-            dist: {
-              options: {
-                style: 'expanded'
-              },
-              files: {
-                'assets/css/style.css': 'assets/scss/style.scss'
-              }
-            }
-        },
-
-        cssmin: {
-          combine: {
-            files: {
-              'assets/css/style.css': ['css/style.css']
-            }
-          }
-        },
+        }
     });
 
     // These plugins provide necessary tasks

@@ -68,9 +68,6 @@ get_header();
 			// Not so dynamic yet =)
 			dynamic_sidebar() 
 		?>
-		
-		<h4>Our Latest Bookmarks</h4>
-      <?php delicious_bookmarks("swedishfika", 5, true, false, false,'',true); ?>
 	  
 	</div>
  <?php get_footer(); ?>
