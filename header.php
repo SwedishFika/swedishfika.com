@@ -42,7 +42,7 @@ else
 
 <div id="container">
 	<div id="menu-container">
-		<div id="logo"><?php bloginfo('name'); ?></div>
+		<div id="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/swedish-fika-logo.png" alt="<?php bloginfo('name');?>"></div>
 		<div id="menu">
 			<ul>
 				<li class="nav_home"><a href="/" >Home</a></li>

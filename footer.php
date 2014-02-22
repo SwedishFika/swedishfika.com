@@ -2,8 +2,8 @@
 		<div id="footer-left">
 			<p class="copyright">Copyright &copy; <?php echo date('Y'); ?>, All Rights Reserved</p>
 			<p>Design, images &amp; stylesheet may not be reused without permission.</p>
-			<p>This site has been designed. coded, browser tested and written by Alexander Radsby &amp; Simon Kjellberg.</p>
-			<p>Crafted with <a href="http://validator.w3.org/check/referer" title="Validates this page">XHTML 1.0 Strict</a>
+			<p>This site has been designed. coded, browser tested and written by Alexander Radsby, Johan Benjaminsson, Ida Franceen &amp; Simon Kjellberg.</p>
+			<p>Crafted with <a href="http://validator.w3.org/check/referer" title="Validates this page">HTML</a>
 			&amp; <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://swedishfika.com/wp-content/themes/swedishfika/style.css" title="Validates the CSS of this page">CSS</a>.</p>
 		</div>
 		<div id="footer-right">
