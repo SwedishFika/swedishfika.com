@@ -46,14 +46,14 @@ else
 <div id="container">
 	<div id="menu-container">
 		<div id="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/swedish-fika-logo.png" alt="<?php bloginfo('name');?>"></div>
-		<div id="menu">
+		<nav>
 			<ul>
 				<li class="nav_home"><a href="/" >Home</a></li>
 				<li class="nav_about"><a href="/about" >About</a></li>
 				<li class="nav_archive"><a href="/archives" >Archives</a></li>
 				<li class="nav_contact"><a href="/contact">Contact</a></li>
 			</ul>
-		</div>
+		</nav>
 		<div id="search">
 			<form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
 				<fieldset>

@@ -401,13 +401,12 @@ th {
   padding: 0;
 }
 
-div#menu-container div#menu {
+nav {
   width: 476px;
   padding-top: 28px;
   float: left;
 }
-
-div#menu-container div#menu ul {
+nav ul {
   width: 456px;
   height: 46px;
   background: #3d3c3c;
@@ -415,14 +414,12 @@ div#menu-container div#menu ul {
   position: relative;
   padding-left: 20px;
 }
-
-div#menu-container div#menu ul li {
+nav li {
   display: block;
   float: left;
   padding-left: 20px;
 }
-
-div#menu-container div#menu ul li a {
+nav a {
   text-decoration: none;
   color: #fff;
   float: left;

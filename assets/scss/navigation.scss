@@ -1,0 +1,28 @@
+nav {
+    width: 476px;
+    padding-top: 28px;  
+    float: left;
+
+    ul {
+        width: 456px;
+        height: 46px;
+        background: #3d3c3c;
+        float: left;    
+        position:relative;  
+        padding-left:20px;
+    }
+
+    li { 
+        display: block;
+        float: left;
+        padding-left: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        float: left;
+        overflow: hidden;
+        text-transform: uppercase;
+    }
+}
