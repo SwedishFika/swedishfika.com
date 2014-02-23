@@ -1,14 +1,19 @@
 /* Import all partials */
-/*@import "settings/variables";
+/*
 @import "settings/colors";
-@import "settings/mixins";
 
 @import "globals";
 @import "framework";
 @import "post";
 @import "home"; */
 
+@import "setting/variable";
+@import "setting/mixin";
+
 @import "vendor/normalize";
+
+@import "base/global";
+
 @import "framework";
 @import "navigation";
 @import "comment";

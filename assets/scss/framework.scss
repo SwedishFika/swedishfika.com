@@ -14,9 +14,7 @@ main a {
 main h2, 
 main h1 {
     padding: 5px 0 10px 0;
-    font-family: Georgia;
     font-size: 215%;
-    font-style: italic;
     color: #57371b;
     font-weight: normal;
     letter-spacing: -1px;
@@ -41,7 +39,7 @@ main h4 {
 
 main h2 a, 
 main h1 a {
-    color: #57371b;
+    color: $sub-header-color;
     border-bottom: none;
     text-decoration: none;
 }

@@ -1,0 +1,19 @@
+/**
+* Font-size mixin
+*
+* Send in two values for font-size and line-height  and get font-size and line-height in rems and pixels.
+* Pixels is for fallback. Also works with two divided values (i.e. 18/16)
+*
+* Example: @include font-size(18/16, 24/16);
+* @include font-size(2, 2.2);
+*/
+
+$base-fontsize: 1.6 !default;
+$base-lineheight: 1.5 !default;
+
+@mixin rem-font-size($size: $base-font, $line: $size * $base-lineheight){
+    font-size:   ceil($size * $font-base) + px;
+    line-height: ceil($line * $font-base) + px;
+    font-size:   $size + rem;
+    line-height: $line + rem;
+}

@@ -1,12 +1,20 @@
 /* Import all partials */
-/*@import "settings/variables";
+/*
 @import "settings/colors";
-@import "settings/mixins";
 
 @import "globals";
 @import "framework";
 @import "post";
 @import "home"; */
+/**
+* Font-size mixin
+*
+* Send in two values for font-size and line-height  and get font-size and line-height in rems and pixels.
+* Pixels is for fallback. Also works with two divided values (i.e. 18/16)
+*
+* Example: @include font-size(18/16, 24/16);
+* @include font-size(2, 2.2);
+*/
 /* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -401,6 +409,61 @@ th {
   padding: 0;
 }
 
+article, aside, figure, footer, header, hgroup,
+menu, nav, section, main {
+  display: block;
+}
+
+body {
+  color: #666565;
+  font-weight: normal;
+  font-family: "nimbus-sans", Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 40px;
+  font-size: 2.1875rem;
+  line-height: 2.5rem;
+  color: #81c0c6;
+  margin: 0 0 20px 0;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0 0 3% 0;
+}
+
+h4, h5, h6 {
+  font-size: 1em;
+  margin: 0 0 3px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
+  font: inherit;
+}
+
+label {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
 /*Main layout and stuff*/
 main {
   clear: both;
@@ -418,9 +481,7 @@ main a {
 main h2,
 main h1 {
   padding: 5px 0 10px 0;
-  font-family: Georgia;
   font-size: 215%;
-  font-style: italic;
   color: #57371b;
   font-weight: normal;
   letter-spacing: -1px;
@@ -448,7 +509,7 @@ main h4 {
 
 main h2 a,
 main h1 a {
-  color: #57371b;
+  color: #81c0c6;
   border-bottom: none;
   text-decoration: none;
 }

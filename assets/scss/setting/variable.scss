@@ -1,0 +1,15 @@
+$default-font-family: "nimbus-sans", Helvetica, sans-serif;
+
+$font-size: 100% !default; // percentage value (16 * 112.5% = 18px)
+$font-base: 16; // base font-size in pixels to work with in font-size mixins
+$line-height: 162.5% !default; // percentage value (16 * 162.5% = 26px)
+
+$medium-font-weight: 400;
+$heavy-font-weight: 600;
+$light-font-weight: 300;
+
+
+//Colors
+
+$text-color: #666565;
+$sub-header-color: #81c0c6;

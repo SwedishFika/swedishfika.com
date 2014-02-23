@@ -22,7 +22,7 @@ q:before,q:after {content:'';}
 body {
 	background: #eadfcb url(assets/img/body-bg.jpg) top center no-repeat;
 	padding-top: 50px;
-	font-family: "nimbus-sans", Helvetica, sans-serif;
+	font-family: $default-font-family;
 	font-weight: lighter;
 }
 
