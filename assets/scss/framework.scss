@@ -6,6 +6,11 @@ main {
     padding: 10px;
     overflow: hidden;
 }
+main a {
+    color: #57371b;
+    border-bottom: 1px dotted #57371b;
+    text-decoration: none;
+}
 main h2, 
 main h1 {
     padding: 5px 0 10px 0;
@@ -32,6 +37,20 @@ main h4 {
     display: block !important;
     clear: both !important;
     text-transform: uppercase;
+}
+
+main h2 a, 
+main h1 a {
+    color: #57371b;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+main h1 a:hover,
+main h2 a:hover {
+    color: #496189;
+    border-bottom: none;
+    text-decoration: none;
 }
 
 main p {
@@ -157,30 +176,8 @@ span#author {
     text-transform: capitalize;
 }
 
-main a {
-    color: #57371b;
-    border-bottom: 1px dotted #57371b;
-    text-decoration: none;
-}
-
-main h2 a, 
-main h1 a {
-    color: #57371b;
-    border-bottom: none;
-    text-decoration: none;
-}
-
-main h1 a:hover,
-main h2 a:hover {
-    color: #496189;
-    border-bottom: none;
-    text-decoration: none;
-}
-
 main div.main-content h3 {  
     padding-top:20px;
-    width:379px;
-    float:left;
 }
 
 main ul {

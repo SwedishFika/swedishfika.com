@@ -1,0 +1,83 @@
+/* Comments Template 
+-----------------------------------------------------------------------------*/
+
+#comment-form {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    clear: both;
+}
+
+#comment-form input {
+    border: #e8e8e8 1px solid;
+    padding: 0.3em;
+    width: 132px;
+    font-size: 100%;
+}
+
+textarea {
+    border: #e8e8e8 1px solid;
+    padding: 0.3em;
+    font-family: Arial;
+    font-size: 100%;
+    width: 436px;
+}
+
+.formfield-message {
+    clear:both;
+}
+
+#author-info {
+    clear: both;
+    padding-top: 15px;
+}
+
+.formfield {
+    margin-right: 20px;
+    width: 131px;
+    float: left;
+}
+
+.formfield-submit {
+    padding-top: 20px;
+    clear: both;
+    display: block;
+}
+
+span.desc {
+    font-size: 90%;
+    color: #a4a4a4;
+}
+label {
+    font-weight: bold;
+    color: #383838;
+}
+div.comment-wrapper {
+    clear: both;
+    padding-top: 10px;
+}
+div.admin-comment div.message {
+    background-color:#EFF4E6;
+}
+.comment-meta {
+    float: left;
+}
+.comment-meta a {
+    border-bottom: none;
+}
+.message {
+    margin-left: 10px;
+    padding: 0.7em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #d3d3d3;
+    background: #fff8ea;
+}
+.comment-author span {
+    font-weight: bold;
+}
+.comment-author span.comment-date {
+    font-size: 90%;
+    color: #959595;
+}
+.comment-post {
+    padding-top: 10px;
+}

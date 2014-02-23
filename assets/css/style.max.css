@@ -409,6 +409,12 @@ main {
   overflow: hidden;
 }
 
+main a {
+  color: #57371b;
+  border-bottom: 1px dotted #57371b;
+  text-decoration: none;
+}
+
 main h2,
 main h1 {
   padding: 5px 0 10px 0;
@@ -438,6 +444,20 @@ main h4 {
   display: block !important;
   clear: both !important;
   text-transform: uppercase;
+}
+
+main h2 a,
+main h1 a {
+  color: #57371b;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+main h1 a:hover,
+main h2 a:hover {
+  color: #496189;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 main p {
@@ -564,30 +584,8 @@ span#author {
   text-transform: capitalize;
 }
 
-main a {
-  color: #57371b;
-  border-bottom: 1px dotted #57371b;
-  text-decoration: none;
-}
-
-main h2 a,
-main h1 a {
-  color: #57371b;
-  border-bottom: none;
-  text-decoration: none;
-}
-
-main h1 a:hover,
-main h2 a:hover {
-  color: #496189;
-  border-bottom: none;
-  text-decoration: none;
-}
-
 main div.main-content h3 {
   padding-top: 20px;
-  width: 379px;
-  float: left;
 }
 
 main ul {
@@ -647,6 +645,98 @@ nav a {
   float: left;
   overflow: hidden;
   text-transform: uppercase;
+}
+
+/* Comments Template 
+-----------------------------------------------------------------------------*/
+#comment-form {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  clear: both;
+}
+
+#comment-form input {
+  border: #e8e8e8 1px solid;
+  padding: 0.3em;
+  width: 132px;
+  font-size: 100%;
+}
+
+textarea {
+  border: #e8e8e8 1px solid;
+  padding: 0.3em;
+  font-family: Arial;
+  font-size: 100%;
+  width: 436px;
+}
+
+.formfield-message {
+  clear: both;
+}
+
+#author-info {
+  clear: both;
+  padding-top: 15px;
+}
+
+.formfield {
+  margin-right: 20px;
+  width: 131px;
+  float: left;
+}
+
+.formfield-submit {
+  padding-top: 20px;
+  clear: both;
+  display: block;
+}
+
+span.desc {
+  font-size: 90%;
+  color: #a4a4a4;
+}
+
+label {
+  font-weight: bold;
+  color: #383838;
+}
+
+div.comment-wrapper {
+  clear: both;
+  padding-top: 10px;
+}
+
+div.admin-comment div.message {
+  background-color: #EFF4E6;
+}
+
+.comment-meta {
+  float: left;
+}
+
+.comment-meta a {
+  border-bottom: none;
+}
+
+.message {
+  margin-left: 10px;
+  padding: 0.7em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgrey;
+  background: #fff8ea;
+}
+
+.comment-author span {
+  font-weight: bold;
+}
+
+.comment-author span.comment-date {
+  font-size: 90%;
+  color: #959595;
+}
+
+.comment-post {
+  padding-top: 10px;
 }
 
 /* RESET 
@@ -839,105 +929,6 @@ div#footer div#footer-right p a {
   float: left;
 }
 
-/* Comments Template 
------------------------------------------------------------------------------*/
-div#comment-form {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  clear: both;
-  width: 455px;
-}
-
-div#comment-form input {
-  border: #e8e8e8 1px solid;
-  padding: 0.3em;
-  width: 132px;
-  font-size: 100%;
-}
-
-textarea {
-  border: #e8e8e8 1px solid;
-  padding: 0.3em;
-  font-family: Arial;
-  font-size: 100%;
-  width: 436px;
-}
-
-div.formfield-message {
-  clear: both;
-}
-
-div#author-info {
-  clear: both;
-  padding-top: 15px;
-}
-
-div.formfield {
-  margin-right: 20px;
-  width: 131px;
-  float: left;
-}
-
-div.formfield-submit {
-  padding-top: 20px;
-  clear: both;
-  display: block;
-}
-
-span.desc {
-  font-size: 90%;
-  color: #a4a4a4;
-}
-
-label {
-  font-weight: bold;
-  color: #383838;
-}
-
-div.comment-wrapper {
-  clear: both;
-  padding-top: 10px;
-}
-
-div.admin-comment div.message {
-  background-color: #EFF4E6;
-}
-
-div.comment-meta {
-  float: left;
-}
-
-div#first-column div.comment-meta a {
-  border-bottom: none;
-}
-
-div.message {
-  margin-left: 10px;
-  width: 384px;
-  float: left;
-  padding: 0.7em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid lightgrey;
-  background: #fff8ea;
-}
-
-div.message p {
-  width: 387px !important;
-}
-
-div.comment-author span {
-  font-weight: bold;
-}
-
-div.comment-author span.comment-date {
-  font-size: 90%;
-  color: #959595;
-}
-
-div.comment-post {
-  padding-top: 10px;
-}
-
 /* Archives 
 -----------------------------------------------------------------------------*/
 .monthtitle {
@@ -965,8 +956,6 @@ div.comment-post {
 
 /*code styles*/
 pre {
-  width: 439px;
-  float: left;
   background: #fefde0 none repeat scroll 0;
   border: 1px solid #cccccc;
   display: block;
