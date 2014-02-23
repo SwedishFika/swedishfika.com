@@ -13,6 +13,9 @@
 
 
  	<?php wp_head(); ?> 
+ 	<!--[if lt IE 9]>
+ 		<?php wp_print_scripts(array('swedishfika-html5shiv')); ?>
+ 	<![endif]-->
 </head>
 
 <?php

@@ -1,0 +1,28 @@
+div#menu-container div#menu {
+    width: 476px;
+    padding-top: 28px;  
+    float: left;
+}
+
+div#menu-container div#menu ul {
+    width: 456px;
+    height: 46px;
+    background: #3d3c3c;
+    float: left;    
+    position:relative;  
+    padding-left:20px;
+}
+
+div#menu-container div#menu ul li { 
+    display: block;
+    float: left;
+    padding-left: 20px;
+}
+
+div#menu-container div#menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    float: left;
+    overflow: hidden;
+    text-transform: uppercase;
+}

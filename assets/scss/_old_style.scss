@@ -22,14 +22,14 @@ q:before,q:after {content:'';}
 body {
 	background: #eadfcb url(assets/img/body-bg.jpg) top center no-repeat;
 	padding-top: 50px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: small;
+	font-family: "nimbus-sans", Helvetica, sans-serif;
+	font-weight: lighter;
 }
 
 code { 
 	border: 1px solid #ccc; 
 	padding: 15px 10px; 
-    line-height: 11px;
+	line-height: 11px;
 	display:  block; 
 	font-size: 100%;
 	background: #fefde0;
@@ -98,88 +98,6 @@ div#menu-container {
 			left: 15px;
 		}
 	
-}
-
-div#menu-container div#menu {
-	width: 476px;
-	padding-top: 28px;	
-	float: left;
-}
-
-div#menu-container div#menu ul {
-	width: 456px;
-	height: 46px;
-	background: #3d3c3c;
-	float: left;	
-	position:relative;	
-	padding-left:20px;
-}
-
-div#menu-container div#menu ul li {	
-	font-family: Georgia, "Times New Roman", Times, serif;	
-	position:absolute;	
-	display: block;
-	float: left;
-	height:46px;
-	width:71px;
-	background:url(assets/img/menu.gif) 0 0 no-repeat;
-}
-
-div#menu-container div#menu ul li a {
-	text-decoration: none;
-	color: #fff;
-	height: 46px;
-	width:71px;
-	float: left;
-	text-transform: lowercase;
-	font-weight:bold;
-	letter-spacing:-1px;
-	overflow: hidden;
-}
-div#menu-container div#menu ul li.nav_home {
-	text-indent: -9999px;
-	background-position: 0px -46px;	left:20px;
-}
-
-div#menu-container div#menu ul li.nav_home a:hover, 
-div#menu-container div#menu ul li.nav_home a:active, 
-div#menu-container div#menu ul li.nav_home a:focus, 
-body.home div#menu-container div#menu ul li.nav_home a {
-	text-indent: -9999px;
-	background:url(assets/img/menu.gif) 0px 0px no-repeat;
-}
-
-div#menu-container div#menu ul li.nav_about {
-	text-indent: -9999px;
-	background-position:-71px -46px;	left: 91px;
-}
-
-div#menu-container div#menu ul li.nav_about a:hover, 
-body.about div#menu-container div#menu ul li.nav_about a {
-	text-indent: -9999px;
-	background:url(assets/img/menu.gif) -71px 0px no-repeat;
-}
-
-div#menu-container div#menu ul li.nav_archive {
-	text-indent: -9999px;
-	background-position:-142px -46px;	left: 162px;
-}
-
-div#menu-container div#menu ul li.nav_archive a:hover, 
-body.archives div#menu-container div#menu ul li.nav_archive a {
-	text-indent: -9999px;
-	background:url(assets/img/menu.gif) -142px 0px no-repeat;
-}
-
-div#menu-container div#menu ul li.nav_contact {
-	text-indent: -9999px;
-	background-position: -213px -46px;	left: 243px;
-}
-
-div#menu-container div#menu ul li.nav_contact a:hover, 
-body.contact div#menu-container div#menu ul li.nav_contact a {
-	text-indent: -9999px;
-	background:url(assets/img/menu.gif) -213px 0px no-repeat;
 }
 
 div#menu-container div#search {
