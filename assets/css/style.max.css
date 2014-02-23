@@ -741,6 +741,15 @@ nav a {
   float: left;
 }
 
+.single {
+  width: 68%;
+  margin: 0 auto;
+}
+.single .big-image {
+  float: none;
+  text-align: center;
+}
+
 .page {
   width: 68%;
   margin: 0 auto;
@@ -763,7 +772,7 @@ nav a {
 #comment-form input {
   border: #e8e8e8 1px solid;
   padding: 0.3em;
-  width: 132px;
+  width: 144px;
   font-size: 100%;
 }
 
