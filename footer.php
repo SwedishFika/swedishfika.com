@@ -11,7 +11,6 @@
 			<p><a href="/feed">RSS Feed</a> &amp; <a href="/feed/atom">Atom Feed</a></p>
 		</div>
 </div>
-</div>
 <div id="bottom"></div>
 </div>
 	<script>
