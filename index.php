@@ -11,7 +11,7 @@ get_header();
 			</a>
 			<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<div class="datebox">
-				<div class="date"><?php the_date(); ?></div>
+				<?php the_date(); ?>
 				<!--<div class="month">DEC</div>-->
 			</div>
 			<div class='main-content'>

@@ -455,7 +455,7 @@ main #contactform {
   padding: 0;
 }
 
-div#content-container {
+#content-container {
   width: 935px;
   background: #fff;
   background-image: url(assets/img/border.jpg);
@@ -482,23 +482,15 @@ main a.big-image-link:hover {
 }
 
 .datebox {
-  background: #92a966 url(assets/img/datebox-bottom.gif) bottom left no-repeat;
-  width: 47px;
-  height: 44px;
+  background: #92a966;
+  color: #fff;
+  width: 60px;
+  height: 40px;
   position: absolute;
   right: 10px;
   top: 0;
-}
-
-.datebox .date {
-  padding: 6px 0 0 0;
-  background: url(assets/img/datebox-top.gif) top left no-repeat;
-  color: #fff;
-  display: block;
-  float: left;
   text-align: center;
-  width: 47px;
-  font-size: 100%;
+  padding-top: 7px;
 }
 
 .datebox .month {
