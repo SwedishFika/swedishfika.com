@@ -1,6 +1,7 @@
 /* Footer */
 
 .bottom{
+    border-top: 1px solid $border-color;
     background: $base-white;
 }
 .footer {
@@ -16,20 +17,12 @@
     width: 70%;
     float: left;
 }
-#footer-left p {
-    width: 609px;
-    color: #787878;
-    line-height: 20px;
-    font-size: 90%;
-}
 #footer-left p a {
     color: #3e3e3e;
     text-decoration: none;
 }
 #footer-left p.copyright {
-    color: #303030;
     padding: 0 0 10px 0;
-    font-size: 90%;
 }
 #footer-right {
     width: 30%;

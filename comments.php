@@ -1,5 +1,5 @@
 <?php if ( $comments ) : ?>
-<div id="comments">
+<div class="comments">
 	<div class="section">
 		<h2>Comments</h2>
 	</div>
@@ -35,7 +35,7 @@
 
 <?php endif; ?>
 
-<div id="add-comment">
+<div class="add-comment">
 	<div id="comment-form">
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 			<fieldset>

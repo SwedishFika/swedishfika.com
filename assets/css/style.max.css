@@ -498,18 +498,12 @@ main h2 {
 }
 
 main h3 {
-  font-size: 100%;
-  color: #6e8d4f;
-  display: block !important;
-  clear: both !important;
+  clear: both;
   text-transform: uppercase;
 }
 
 main h4 {
-  font-size: 85%;
-  color: #5c7841;
-  display: block !important;
-  clear: both !important;
+  clear: both;
   text-transform: uppercase;
 }
 
@@ -692,6 +686,7 @@ nav a {
 
 /* Footer */
 .bottom {
+  border-top: 1px solid gainsboro;
   background: white;
 }
 
@@ -709,22 +704,13 @@ nav a {
   float: left;
 }
 
-#footer-left p {
-  width: 609px;
-  color: #787878;
-  line-height: 20px;
-  font-size: 90%;
-}
-
 #footer-left p a {
   color: #3e3e3e;
   text-decoration: none;
 }
 
 #footer-left p.copyright {
-  color: #303030;
   padding: 0 0 10px 0;
-  font-size: 90%;
 }
 
 #footer-right {
@@ -753,8 +739,19 @@ nav a {
   float: left;
 }
 
+.page {
+  width: 68%;
+  margin: 0 auto;
+}
+
 /* Comments Template 
 -----------------------------------------------------------------------------*/
+.add-comment,
+.comments {
+  width: 68%;
+  margin: 0 auto;
+}
+
 #comment-form {
   padding-top: 20px;
   padding-bottom: 40px;

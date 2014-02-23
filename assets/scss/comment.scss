@@ -1,6 +1,10 @@
 /* Comments Template 
 -----------------------------------------------------------------------------*/
-
+.add-comment,
+.comments{
+    width: 68%;
+    margin: 0 auto;
+}
 #comment-form {
     padding-top: 20px;
     padding-bottom: 40px;
