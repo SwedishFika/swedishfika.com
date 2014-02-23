@@ -465,6 +465,12 @@ img {
 }
 
 /*Main layout and stuff*/
+#container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 main {
   clear: both;
   background: #fff;
@@ -530,21 +536,6 @@ main #contactform {
   display: block;
 }
 
-#container {
-  width: 955px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-#content-container {
-  width: 935px;
-  background: #fff;
-  background-image: url(assets/img/border.jpg);
-  background-repeat: repeat-y;
-  background-position: 480px 10px;
-  padding: 10px;
-}
-
 main img {
   padding-bottom: 10px;
 }
@@ -583,15 +574,6 @@ main a.big-image-link:hover {
   text-transform: uppercase;
   padding: 0 0 5px 0;
   font-size: 90%;
-}
-
-div#content-container p {
-  width: 456px;
-  line-height: 18px;
-  clear: both;
-  color: #363636;
-  float: left;
-  text-align: left;
 }
 
 div#main-entry {
@@ -706,6 +688,69 @@ nav a {
   float: left;
   overflow: hidden;
   text-transform: uppercase;
+}
+
+/* Footer */
+.bottom {
+  background: white;
+}
+
+.footer {
+  margin-top: 10px;
+  padding: 20px 15px;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1280px;
+}
+
+#footer-left {
+  width: 70%;
+  float: left;
+}
+
+#footer-left p {
+  width: 609px;
+  color: #787878;
+  line-height: 20px;
+  font-size: 90%;
+}
+
+#footer-left p a {
+  color: #3e3e3e;
+  text-decoration: none;
+}
+
+#footer-left p.copyright {
+  color: #303030;
+  padding: 0 0 10px 0;
+  font-size: 90%;
+}
+
+#footer-right {
+  width: 30%;
+  float: left;
+}
+
+#footer-right p {
+  width: 291px;
+  float: left;
+  margin: 0;
+  padding: 0 5px 0 0;
+  color: #475a22;
+  font-size: 90%;
+  text-align: right;
+}
+
+#footer-right p a {
+  color: #475a22;
+  text-decoration: none;
+}
+
+#bottom {
+  height: 20px;
+  width: 955px;
+  float: left;
 }
 
 /* Comments Template 
@@ -861,8 +906,8 @@ code {
 
 /* Banner/menu-section 
 -----------------------------------------------------------------------------*/
-div#menu-container {
-  width: 955px;
+#menu-container {
+  width: 1280px;
   height: 74px;
   float: left;
   background: #3d3c3c;
@@ -879,14 +924,17 @@ div#menu-container {
   left: 15px;
 }
 
-div#menu-container div#search {
+#search {
   padding-top: 28px;
   width: 236px;
-  float: left;
+  float: right;
   height: 46px;
+  position: relative;
+  top: -15px;
+  right: 20px;
 }
 
-div#menu-container div#search form {
+#search form {
   width: 236px;
   height: 35px;
   background: #3d3c3c;
@@ -894,7 +942,7 @@ div#menu-container div#search form {
   float: left;
 }
 
-div#menu-container div#search form div {
+#search form div {
   background: #494949 url(assets/img/search-bg.jpg) center left no-repeat;
   background-position: 5px;
   border: 1px solid #535353;
@@ -903,7 +951,7 @@ div#menu-container div#search form div {
   float: left;
 }
 
-div#menu-container div#search form div input {
+#search form div input {
   width: 198px;
   background: #494949;
   padding-left: 5px;
@@ -928,66 +976,6 @@ div.navigation div.newer {
 div.navigation div.older {
   float: left;
   width: 228px;
-}
-
-/* Footer */
-div#footer {
-  border-top: 2px solid #d3d8ca;
-  background: #eff4e6;
-  margin-top: 10px;
-  padding: 20px 15px;
-  float: left;
-  clear: both;
-  width: 925px;
-}
-
-div#footer div#footer-left {
-  width: 609px;
-  float: left;
-}
-
-div#footer div#footer-left p {
-  width: 609px;
-  color: #787878;
-  line-height: 20px;
-  font-size: 90%;
-}
-
-div#footer div#footer-left p a {
-  color: #3e3e3e;
-  text-decoration: none;
-}
-
-div#footer div#footer-left p.copyright {
-  color: #303030;
-  padding: 0 0 10px 0;
-  font-size: 90%;
-}
-
-div#footer div#footer-right {
-  width: 296px;
-  float: left;
-}
-
-div#footer div#footer-right p {
-  width: 291px;
-  float: left;
-  margin: 0;
-  padding: 0 5px 0 0;
-  color: #475a22;
-  font-size: 90%;
-  text-align: right;
-}
-
-div#footer div#footer-right p a {
-  color: #475a22;
-  text-decoration: none;
-}
-
-#bottom {
-  height: 20px;
-  width: 955px;
-  float: left;
 }
 
 /* Archives 

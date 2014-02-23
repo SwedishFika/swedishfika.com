@@ -13,9 +13,10 @@
 @import "vendor/normalize";
 
 @import "base/global";
+@import "base/framework";
+@import "base/navigation";
+@import "base/footer";
 
-@import "framework";
-@import "navigation";
 @import "comment";
 @import "old_style";
 
