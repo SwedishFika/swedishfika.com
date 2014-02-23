@@ -48,10 +48,10 @@ else
 		<div id="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/swedish-fika-logo.png" alt="<?php bloginfo('name');?>"></div>
 		<nav>
 			<ul>
-				<li class="nav_home"><a href="/" >Home</a></li>
-				<li class="nav_about"><a href="/about" >About</a></li>
-				<li class="nav_archive"><a href="/archives" >Archives</a></li>
-				<li class="nav_contact"><a href="/contact">Contact</a></li>
+				<li class="nav_home"><a href="<?php echo home_url(); ?>/" >Home</a></li>
+				<li class="nav_about"><a href="<?php echo home_url(); ?>/about" >About</a></li>
+				<li class="nav_archive"><a href="<?php echo home_url(); ?>/archives" >Archives</a></li>
+				<li class="nav_contact"><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
 			</ul>
 		</nav>
 		<div id="search">
