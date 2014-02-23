@@ -10,10 +10,11 @@ get_header();
 			<img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
 			</a>
 			<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<div class="datebox">
-				<?php the_date(); ?>
-				<!--<div class="month">DEC</div>-->
-			</div>
+			<p class="pub-date"> 
+				<time pubdate>
+					<?php the_date(); ?>
+				</time>
+			</p>
 			<div class='main-content'>
 				<?php the_content(__('Continue reading...')); ?>
 			</div>

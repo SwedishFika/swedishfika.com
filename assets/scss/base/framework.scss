@@ -1,188 +1,184 @@
 /*Main layout and stuff*/
+@media screen{
+    html{
+        background: url(assets/img/cozy-txture.png);
+    }
+    #container{
+        width: $framework-max-width;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-#container{
-    width: $framework-max-width;
-    margin: 0 auto;
-    padding: 0;
-}
+    main {
+        clear: both;
+        background: #fff;
+        padding: 10px;
+        overflow: hidden;
+    }
+    main a {
+        color: #57371b;
+        border-bottom: 1px dotted #57371b;
+        text-decoration: none;
+    }
+    main h2, 
+    main h1 {
+        padding: 5px 0 10px 0;
+        font-size: 215%;
+        color: #57371b;
+        font-weight: normal;
+        letter-spacing: -1px;
+    }
+    main h2{
+        padding-right: 60px;
+    }
+    main h3 {
+        clear: both;
+        text-transform: uppercase;
+    }
+    main h4 {
+        clear: both;
+        text-transform: uppercase;
+    }
 
-main {
-    clear: both;
-    background: #fff;
-    padding: 10px;
-    overflow: hidden;
-}
-main a {
-    color: #57371b;
-    border-bottom: 1px dotted #57371b;
-    text-decoration: none;
-}
-main h2, 
-main h1 {
-    padding: 5px 0 10px 0;
-    font-size: 215%;
-    color: #57371b;
-    font-weight: normal;
-    letter-spacing: -1px;
-}
-main h2{
-    padding-right: 60px;
-}
-main h3 {
-    clear: both;
-    text-transform: uppercase;
-}
-main h4 {
-    clear: both;
-    text-transform: uppercase;
-}
+    main h2 a, 
+    main h1 a {
+        color: $sub-header-color;
+        border-bottom: none;
+        text-decoration: none;
+    }
 
-main h2 a, 
-main h1 a {
-    color: $sub-header-color;
-    border-bottom: none;
-    text-decoration: none;
-}
+    main h1 a:hover,
+    main h2 a:hover {
+        color: #496189;
+        border-bottom: none;
+        text-decoration: none;
+    }
 
-main h1 a:hover,
-main h2 a:hover {
-    color: #496189;
-    border-bottom: none;
-    text-decoration: none;
-}
+    main p {
+        margin-bottom: 15px;
+    }
 
-main p {
-    margin-bottom: 15px;
-}
+    main #contactform {
+        clear: both;
+        display: block;
+    }
 
-main #contactform {
-    clear: both;
-    display: block;
-}
+    main img {
+        padding-bottom: 10px;
+    }
 
-main img {
-    padding-bottom: 10px;
-}
+    main img.big-image {
+        border:1px solid #cfd0cb;
+        padding: 4px;
+        width: 446px;
+        margin:0 20px 10px 0;
+        float: left;
+    }
 
-main img.big-image {
-    border:1px solid #cfd0cb;
-    padding: 4px;
-    width: 446px;
-    margin:0 20px 10px 0;
-    float: left;
-}
+    main a.big-image-link, 
+    main a.big-image-link:hover {
+        border: none;
+    }
+    .pub-date {
+        @include font-size(15/$font-base, 28/$font-base);
+    }
 
-main a.big-image-link, 
-main a.big-image-link:hover {
-    border: none;
-}
+    div#main-entry {
+        border-bottom: 2px solid #edf1e5;
+        padding-bottom: 20px;
+    }
 
-.datebox {
-    background: #92a966;
-    color: #fff;
-    width: 60px;
-    height: 40px;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    text-align: center;
-    padding-top: 7px;
-}
-.datebox .month {
-    color: #fff;
-    display: block;
-    font-weight: normal;
-    text-align: center;
-    width: 47px;
-    text-transform: uppercase;
-    padding: 0 0 5px 0;
-    font-size: 90%;
-}
+    .main-entry {
+        border-bottom: 2px solid #edf1e5;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        clear: left;
+        position: relative;
 
-div#main-entry {
-    border-bottom: 2px solid #edf1e5;
-    padding-bottom: 20px;
-}
+            h2,
+            .pub-date,
+            .main-content{
+                padding-left: 476px;
+            }
+    }
 
-.main-entry {
-    border-bottom: 2px solid #edf1e5;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    clear: left;
-    position: relative;
-}
-
-.main-entry ul, #main-entry ul {
-    list-style: disc;
-    clear:both;
-    display: block;
-}
+    .main-entry ul, #main-entry ul {
+        list-style: disc;
+        clear:both;
+        display: block;
+    }
 
 
-.main-entry li, #main-entry li {
-    margin-left: 30px;
-}
+    .main-entry li, #main-entry li {
+        margin-left: 30px;
+    }
 
-.article-top {
-    margin: 0;
-    padding: 0 0 10px 0;
-}
+    .article-top {
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
 
-.page {
-    padding-bottom: 20px;
-    border-bottom: 0px !important;
-}
+    .page {
+        padding-bottom: 20px;
+        border-bottom: 0px !important;
+    }
 
-.entry {
-    width: 456px;
-    border-bottom: 2px solid #edf1e5;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    float: left;
-}
+    .entry {
+        width: 456px;
+        border-bottom: 2px solid #edf1e5;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        float: left;
+    }
 
-span#author {
-    display: block;
-    clear:both;
-    padding-top: 10px;
-    font-size: 90%;
-    color: #4e4e4e;
-    text-transform: capitalize;
-}
+    span#author {
+        display: block;
+        clear:both;
+        padding-top: 10px;
+        font-size: 90%;
+        color: #4e4e4e;
+        text-transform: capitalize;
+    }
 
-main div.main-content h3 {  
-    padding-top:20px;
-}
+    main div.main-content h3 {  
+        padding-top:20px;
+    }
 
-main ul {
-    padding: 0 0 0 15px;
-    margin-bottom: 15px;
-}
+    main ul {
+        padding: 0 0 0 15px;
+        margin-bottom: 15px;
+    }
 
-main ul li {
-    margin: 0 0 5px 0;
-}
+    main ul li {
+        margin: 0 0 5px 0;
+    }
 
-main a:hover {
-    color: #496189;
-    border-bottom: 1px dotted #496189;
-    text-decoration: none;
-}
+    main a:hover {
+        color: #496189;
+        border-bottom: 1px dotted #496189;
+        text-decoration: none;
+    }
 
-main div.archive-month {
-    margin: 0;
-    padding: 0;
-}
+    main div.archive-month {
+        margin: 0;
+        padding: 0;
+    }
 
-main div.car-container ul li {
-    list-style:none;
-}
+    main div.car-container ul li {
+        list-style:none;
+    }
 
-main div.car-container ul li span.car-yearmonth {
-    font-size:120%; 
-    margin:20px 0px 3px 0px;
-    display:block;  
-    font-weight:bold;   
-    color:#57371B;
+    main div.car-container ul li span.car-yearmonth {
+        font-size:120%; 
+        margin:20px 0px 3px 0px;
+        display:block;  
+        font-weight:bold;   
+        color:#57371B;
+    }
+}
+@media screen and (min-width: 960px) {
+    body{
+        @include font-size(20/$font-base, 30/$font-base);
+    }
 }
