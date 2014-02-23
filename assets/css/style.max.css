@@ -402,6 +402,28 @@ th {
 }
 
 /*Main layout and stuff*/
+main {
+  clear: both;
+  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+}
+
+main h2,
+main h1 {
+  padding: 5px 0 10px 0;
+  font-family: Georgia;
+  font-size: 215%;
+  font-style: italic;
+  color: #57371b;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+main h2 {
+  padding-right: 60px;
+}
+
 main h3 {
   font-size: 100%;
   color: #6e8d4f;
@@ -418,13 +440,6 @@ main h4 {
   text-transform: uppercase;
 }
 
-main {
-  clear: both;
-  background: #fff;
-  padding: 10px;
-  overflow: hidden;
-}
-
 main p {
   margin-bottom: 15px;
 }
@@ -438,7 +453,6 @@ main #contactform {
   width: 955px;
   margin: 0 auto;
   padding: 0;
-  height: 400px;
 }
 
 div#content-container {
@@ -458,7 +472,8 @@ main img.big-image {
   border: 1px solid #cfd0cb;
   padding: 4px;
   width: 446px;
-  margin-bottom: 10px;
+  margin: 0 20px 10px 0;
+  float: left;
 }
 
 main a.big-image-link,
@@ -466,26 +481,27 @@ main a.big-image-link:hover {
   border: none;
 }
 
-div.datebox {
+.datebox {
   background: #92a966 url(assets/img/datebox-bottom.gif) bottom left no-repeat;
   width: 47px;
   height: 44px;
-  float: right;
+  position: absolute;
+  right: 10px;
+  top: 0;
 }
 
-div.datebox div.date {
+.datebox .date {
   padding: 6px 0 0 0;
   background: url(assets/img/datebox-top.gif) top left no-repeat;
   color: #fff;
   display: block;
   float: left;
-  font-weight: bold;
   text-align: center;
   width: 47px;
   font-size: 100%;
 }
 
-div.datebox div.month {
+.datebox .month {
   color: #fff;
   display: block;
   font-weight: normal;
@@ -493,7 +509,6 @@ div.datebox div.month {
   width: 47px;
   text-transform: uppercase;
   padding: 0 0 5px 0;
-  font-family: Georgia;
   font-size: 90%;
 }
 
@@ -511,23 +526,26 @@ div#main-entry {
   padding-bottom: 20px;
 }
 
-div.main-entry {
+.main-entry {
   border-bottom: 2px solid #edf1e5;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
+  clear: left;
+  position: relative;
 }
 
-div.main-entry ul, div#main-entry ul {
+.main-entry ul, #main-entry ul {
   list-style: disc;
   clear: both;
   display: block;
 }
 
-div.main-entry li, div#main-entry li {
+.main-entry li, #main-entry li {
   margin-left: 30px;
 }
 
-div.article-top {
+.article-top {
   margin: 0;
   padding: 0 0 10px 0;
 }
@@ -537,23 +555,12 @@ div.article-top {
   border-bottom: 0px !important;
 }
 
-div.entry {
+.entry {
   width: 456px;
   border-bottom: 2px solid #edf1e5;
   padding-bottom: 20px;
   padding-top: 20px;
   float: left;
-}
-
-main h2,
-main h1 {
-  padding: 5px 0 10px 0;
-  font-family: Georgia;
-  font-size: 215%;
-  font-style: italic;
-  color: #57371b;
-  font-weight: normal;
-  letter-spacing: -1px;
 }
 
 span#author {
