@@ -2,13 +2,16 @@
 get_header();
 ?>
 <main>
-	
 	<?php //if (is_front_page()) {query_posts('showposts=3');}?>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<article class="main-entry">
-			<a href="<?php the_permalink() ?>" rel="bookmark" class="big-image-link">
-			<img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
-			</a>
+			<?php if (get_post_custom_values("big")) : ?>
+				<a href="<?php the_permalink() ?>" rel="bookmark" class="big-image-link">
+				<img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
+				</a>
+			<?php else: ?>
+				<p>Putting in big image</p>
+			<?php endif; ?>
 			<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<p class="pub-date"> 
 				<time pubdate>

@@ -17,6 +17,9 @@
     - adding custom fields to user profiles
 */
 require_once('swedishfika.php'); // if you remove this, swedishfika will break
+
+add_theme_support( 'post-thumbnails' ); 
+
 /**
  * If more than one page exists, return TRUE.
  */
@@ -25,12 +28,4 @@ function show_posts_nav() {
 	return ($wp_query->max_num_pages > 1);
 }
 
-if ( function_exists('register_sidebar') ){
-    register_sidebar(array(
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ));
-}
 ?>
