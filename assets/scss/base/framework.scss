@@ -11,7 +11,6 @@
 
     main {
         clear: both;
-        background: #fff;
         padding: 10px;
         overflow: hidden;
     }
@@ -176,9 +175,55 @@
         font-weight:bold;   
         color:#57371B;
     }
+    .weighty-post-header{
+        position: relative;
+        top: -2em;
+        padding:15% 0 15%;
+
+        a,
+        h1,
+        h2{
+            font-family: 'Jubilat', Georgia, serif;
+            @include font-size(32/$font-base, 29/$font-base);
+            color: $header;
+            margin:15% 0;
+            text-decoration: none;
+            text-align: center;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            width:100%;
+            max-width: 1280px;
+            min-width: 60px;
+            height: auto;
+            overflow:hidden;
+            margin: 0 auto;
+        }
+    }
 }
-@media screen and (min-width: 960px) {
+@media (min-width: 600px) {
+    .weighty-post-header{
+        a,
+        h1,
+        h2{
+            @include font-size(42/$font-base, 38/$font-base);
+        }
+    }
+}
+@media (min-width: 800px) {
     body{
         @include font-size(20/$font-base, 30/$font-base);
+    }
+    .weighty-post-header{
+        a,
+        h1,
+        h2{
+            @include font-size(83/$font-base, 76/$font-base);
+            margin:7% 0;
+        }
     }
 }

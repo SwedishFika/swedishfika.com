@@ -18,14 +18,17 @@
 */
 require_once('swedishfika.php'); // if you remove this, swedishfika will break
 
-add_theme_support( 'post-thumbnails' ); 
+if ( function_exists( 'add_theme_support' ) ) { 
+    add_theme_support( 'post-thumbnails' ); 
+    add_image_size( 'list-thumb', 376, 9999 ); //300 pixels wide (and unlimited height)
+}
 
 /**
  * If more than one page exists, return TRUE.
  */
 function show_posts_nav() {
-	global $wp_query;
-	return ($wp_query->max_num_pages > 1);
+    global $wp_query;
+    return ($wp_query->max_num_pages > 1);
 }
 
 ?>

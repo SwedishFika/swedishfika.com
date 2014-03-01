@@ -478,7 +478,6 @@ img {
 
   main {
     clear: both;
-    background: #fff;
     padding: 10px;
     overflow: hidden;
   }
@@ -650,13 +649,65 @@ img {
     font-weight: bold;
     color: #57371B;
   }
+
+  .weighty-post-header {
+    position: relative;
+    top: -2em;
+    padding: 15% 0 15%;
+  }
+  .weighty-post-header a,
+  .weighty-post-header h1,
+  .weighty-post-header h2 {
+    font-family: "Jubilat", Georgia, serif;
+    font-size: 32px;
+    line-height: 29px;
+    font-size: 2rem;
+    line-height: 1.8125rem;
+    color: #fffcde;
+    margin: 15% 0;
+    text-decoration: none;
+    text-align: center;
+  }
+  .weighty-post-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 60px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+  }
 }
-@media screen and (min-width: 960px) {
+@media (min-width: 600px) {
+  .weighty-post-header a,
+  .weighty-post-header h1,
+  .weighty-post-header h2 {
+    font-size: 42px;
+    line-height: 38px;
+    font-size: 2.625rem;
+    line-height: 2.375rem;
+  }
+}
+@media (min-width: 800px) {
   body {
     font-size: 20px;
     line-height: 30px;
     font-size: 1.25rem;
     line-height: 1.875rem;
+  }
+
+  .weighty-post-header a,
+  .weighty-post-header h1,
+  .weighty-post-header h2 {
+    font-size: 83px;
+    line-height: 76px;
+    font-size: 5.1875rem;
+    line-height: 4.75rem;
+    margin: 7% 0;
   }
 }
 /* Site navigation*/
