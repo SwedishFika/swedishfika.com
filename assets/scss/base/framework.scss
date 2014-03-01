@@ -203,6 +203,12 @@
             overflow:hidden;
             margin: 0 auto;
         }
+        .pub-date{
+            text-align: center;
+            display: block;
+            @include font-size(16/$font-base, 18/$font-base);
+            color: $header;
+        }
     }
 }
 @media (min-width: 600px) {

@@ -7,20 +7,17 @@ get_header();
             <?php if ($wp_query->current_post == 0 && !is_paged() ) : ?>
             <article class="featured-post" role="article" itemscope itemtype="http://schema.org/Article">
                 <a href="<?php the_permalink() ?>" rel="bookmark" class="big-image-link">
-                <?php if (get_post_custom_values("big")) : ?>
-                        <header class="weighty-post-header">
-                            <h2><?php the_title(); ?></h2>
+                    <header class="weighty-post-header">
+                        <h2><?php the_title(); ?></h2>
+                        <?php if (get_post_custom_values("big")) : ?>
                             <img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
-                        </header>
-                <?php else: ?>
-                        <header class="weighty-post-header">
-                            <h2><?php the_title(); ?></h2>
+                        <?php else: ?>
                             <?php the_post_thumbnail(); ?>
-                        </header>
-                <?php endif; ?>
-                    <time class="pub-date" pubdate itemprop="datePublished">
-                        <?php the_date(); ?>
-                    </time>
+                        <?php endif; ?>
+                        <time class="pub-date" pubdate itemprop="datePublished">
+                            <?php the_date(); ?>
+                        </time>
+                    </header>
                 </a>
             </article>
         <?php else: ?>
