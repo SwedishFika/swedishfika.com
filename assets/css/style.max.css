@@ -470,6 +470,24 @@ img {
     background: url(assets/img/cozy-txture.png);
   }
 
+  body {
+    border-top: 4px solid black;
+  }
+
+  .fika-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 100px;
+  }
+
+  .fika-header a {
+    margin: 0;
+    padding: 1.5% 0 0 0;
+    text-align: center;
+    display: block;
+  }
+
   #container {
     width: 1280px;
     margin: 0 auto;
@@ -652,8 +670,8 @@ img {
 
   .weighty-post-header {
     position: relative;
-    top: -2em;
-    padding: 15% 0 15%;
+    padding: 0 0 15%;
+    top: 30%;
   }
   .weighty-post-header a,
   .weighty-post-header h1,
@@ -664,13 +682,13 @@ img {
     font-size: 2rem;
     line-height: 1.8125rem;
     color: #fffcde;
-    margin: 15% 0;
+    margin: 20% 0 13%;
     text-decoration: none;
     text-align: center;
   }
   .weighty-post-header img {
     position: absolute;
-    top: 0;
+    top: -57%;
     left: 0;
     right: 0;
     z-index: -1;
@@ -716,20 +734,17 @@ img {
     line-height: 76px;
     font-size: 5.1875rem;
     line-height: 4.75rem;
-    margin: 7% 0;
   }
 }
 /* Site navigation*/
 nav {
   width: 476px;
   padding-top: 28px;
-  float: left;
+  position: absolute;
+  right: 80px;
 }
 nav ul {
-  width: 456px;
   height: 46px;
-  background: #3d3c3c;
-  float: left;
   position: relative;
   padding-left: 20px;
 }
@@ -960,66 +975,6 @@ code {
   font-size: 100%;
   background: #fefde0;
   white-space: pre;
-}
-
-.home h1 {
-  text-indent: -9999px;
-}
-
-/* Banner/menu-section 
------------------------------------------------------------------------------*/
-#menu-container {
-  width: 1280px;
-  height: 74px;
-  float: left;
-  background: #3d3c3c;
-}
-
-#logo {
-  width: 243px;
-  height: 74px;
-  float: left;
-}
-#logo img {
-  position: relative;
-  top: 7px;
-  left: 15px;
-}
-
-#search {
-  padding-top: 28px;
-  width: 236px;
-  float: right;
-  height: 46px;
-  position: relative;
-  top: -15px;
-  right: 20px;
-}
-
-#search form {
-  width: 236px;
-  height: 35px;
-  background: #3d3c3c;
-  padding-top: 11px;
-  float: left;
-}
-
-#search form div {
-  background: #494949 url(assets/img/search-bg.jpg) center left no-repeat;
-  background-position: 5px;
-  border: 1px solid #535353;
-  padding: 3px 0 3px 20px;
-  width: 205px;
-  float: left;
-}
-
-#search form div input {
-  width: 198px;
-  background: #494949;
-  padding-left: 5px;
-  border: 1px solid #494949;
-  float: left;
-  color: #fff;
 }
 
 /* Page Nav 

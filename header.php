@@ -23,7 +23,7 @@ $title = wp_title('', false);
 $title = trim($title);
 if($title == "")
 {
-	echo '<body class="home"><h1>Swedish fika</h1>';
+	echo '<body class="home">';
 }
 else if($title == "About")
 {
@@ -44,22 +44,16 @@ else
 ?>
 
 <div id="container">
-	<div id="menu-container">
-		<div id="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/swedish-fika-logo.png" alt="<?php bloginfo('name');?>"></div>
-		<nav>
-			<ul>
-				<li class="nav_home"><a href="<?php echo home_url(); ?>/" >Home</a></li>
-				<li class="nav_about"><a href="<?php echo home_url(); ?>/about" >About</a></li>
-				<li class="nav_archive"><a href="<?php echo home_url(); ?>/archives" >Archives</a></li>
-				<li class="nav_contact"><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
-			</ul>
-		</nav>
-		<div id="search">
-			<form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-				<fieldset>
-					<div><input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /></div>
-					<input type="submit" id="searchsubmit" value="search" class="hidden" />
-				</fieldset>
-			</form>
-		</div>
-	</div>
+	<header class="fika-logo" role="banner">
+		<h1>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/swedish-fika-logo.png" alt="<?php bloginfo('name');?>">
+		</h1>
+	</header>
+	<nav>
+		<ul>
+			<li class="nav_home"><a href="<?php echo home_url(); ?>/" >Home</a></li>
+			<li class="nav_about"><a href="<?php echo home_url(); ?>/about" >About</a></li>
+			<li class="nav_archive"><a href="<?php echo home_url(); ?>/archives" >Archives</a></li>
+			<li class="nav_contact"><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
+		</ul>
+	</nav>

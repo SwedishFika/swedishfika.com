@@ -2,13 +2,11 @@
 nav {
     width: 476px;
     padding-top: 28px;  
-    float: left;
+    position: absolute;
+    right: 80px;
 
     ul {
-        width: 456px;
-        height: 46px;
-        background: #3d3c3c;
-        float: left;    
+        height: 46px;  
         position:relative;  
         padding-left:20px;
     }

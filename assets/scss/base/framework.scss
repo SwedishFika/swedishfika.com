@@ -3,12 +3,28 @@
     html{
         background: url(assets/img/cozy-txture.png);
     }
+    body{
+        border-top: 4px solid $base-black;
+    }
+    .fika-logo{
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 100px;
+    }
+    .fika-header{
+        a{
+            margin: 0;
+            padding: 1.5% 0 0 0;
+            text-align: center;
+            display: block;
+        }
+    }
     #container{
         width: $framework-max-width;
         margin: 0 auto;
         padding: 0;
     }
-
     main {
         clear: both;
         padding: 10px;
@@ -177,8 +193,8 @@
     }
     .weighty-post-header{
         position: relative;
-        top: -2em;
-        padding:15% 0 15%;
+        padding:0 0 15%;
+        top: 30%;
 
         a,
         h1,
@@ -186,13 +202,13 @@
             font-family: 'Jubilat', Georgia, serif;
             @include font-size(32/$font-base, 29/$font-base);
             color: $header;
-            margin:15% 0;
+            margin:20% 0 13%;
             text-decoration: none;
             text-align: center;
         }
         img{
             position: absolute;
-            top: 0;
+            top: -57%;
             left: 0;
             right: 0;
             z-index: -1;
@@ -229,7 +245,6 @@
         h1,
         h2{
             @include font-size(83/$font-base, 76/$font-base);
-            margin:7% 0;
         }
     }
 }
