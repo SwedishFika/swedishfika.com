@@ -5,8 +5,7 @@ get_header();
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <?php if ($wp_query->current_post == 0 && !is_paged() ) : ?>
-            <article class="featured-post" role="article" itemscope itemtype="http://schema.org/Article">
-                <header class="weighty-post-header">
+            <article class="weighty-post-header" role="article" itemscope itemtype="http://schema.org/Article">
                     <?php if (get_post_custom_values("big")) : ?>
                         <img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
                     <?php else: ?>
@@ -18,7 +17,6 @@ get_header();
                             <?php the_date(); ?>
                         </time>
                     </a>
-                </header>
             </article>
         <?php else: ?>
             <article class="main-entry">

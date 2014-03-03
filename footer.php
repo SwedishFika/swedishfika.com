@@ -22,5 +22,6 @@
 		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 		ga('create','UA-12170777-1');ga('send','pageview');
 	</script>
+	<?php wp_footer(); ?>
 </body>
 </html>

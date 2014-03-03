@@ -27,7 +27,7 @@
     }
     main {
         clear: both;
-        padding: 10px;
+        padding:0;
         overflow: hidden;
     }
     main a {
@@ -46,15 +46,11 @@
     main h2{
         padding-right: 60px;
     }
-    main h3 {
-        clear: both;
-        text-transform: uppercase;
-    }
+    main h3,
     main h4 {
         clear: both;
         text-transform: uppercase;
     }
-
     main h2 a, 
     main h1 a {
         color: $sub-header-color;
@@ -192,9 +188,7 @@
         color:#57371B;
     }
     .weighty-post-header{
-        position: relative;
         padding:0 0 15%;
-        top: 30%;
 
         a,
         h1,
@@ -202,13 +196,13 @@
             font-family: 'Jubilat', Georgia, serif;
             @include font-size(32/$font-base, 29/$font-base);
             color: $header;
-            margin:20% 0 13%;
+            margin: 20% 0 10%;
             text-decoration: none;
             text-align: center;
         }
         img{
             position: absolute;
-            top: -57%;
+            top: 0;
             left: 0;
             right: 0;
             z-index: -1;
@@ -223,7 +217,8 @@
             text-align: center;
             display: block;
             @include font-size(16/$font-base, 18/$font-base);
-            color: $header;
+            color: $base-white;
+            font-family: $default-font-family;
         }
     }
 }

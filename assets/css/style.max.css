@@ -496,7 +496,7 @@ img {
 
   main {
     clear: both;
-    padding: 10px;
+    padding: 0;
     overflow: hidden;
   }
 
@@ -519,11 +519,7 @@ img {
     padding-right: 60px;
   }
 
-  main h3 {
-    clear: both;
-    text-transform: uppercase;
-  }
-
+  main h3,
   main h4 {
     clear: both;
     text-transform: uppercase;
@@ -669,9 +665,7 @@ img {
   }
 
   .weighty-post-header {
-    position: relative;
     padding: 0 0 15%;
-    top: 30%;
   }
   .weighty-post-header a,
   .weighty-post-header h1,
@@ -682,13 +676,13 @@ img {
     font-size: 2rem;
     line-height: 1.8125rem;
     color: #fffcde;
-    margin: 20% 0 13%;
+    margin: 20% 0 10%;
     text-decoration: none;
     text-align: center;
   }
   .weighty-post-header img {
     position: absolute;
-    top: -57%;
+    top: 0;
     left: 0;
     right: 0;
     z-index: -1;
@@ -706,7 +700,8 @@ img {
     line-height: 18px;
     font-size: 1rem;
     line-height: 1.125rem;
-    color: #fffcde;
+    color: white;
+    font-family: "nimbus-sans", Helvetica, sans-serif;
   }
 }
 @media (min-width: 600px) {
