@@ -10,10 +10,10 @@ get_header();
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="page">
             <header class="weighty-post-header">
-                    <?php if (get_post_custom_values("big")) : ?>
-                        <img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
-                    <?php else: ?>
+                    <?php if ( has_post_thumbnail() ) : ?>
                         <?php the_post_thumbnail(); ?>
+                    <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fika.jpg" alt=""  />
                     <?php endif; ?>
                     <h1><?php the_title(); ?></h1>
             </header>
