@@ -1,14 +1,14 @@
 <?php
 get_header();
 ?>
-<main>
+<main role="main">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="single">
-            <header class="weighty-post-header" role="article" itemscope itemtype="http://schema.org/Article">
-                    <?php if (get_post_custom_values("big")) : ?>
-                        using fallback
-                    <?php else: ?>
+		<article class="single" role="article" itemscope itemtype="http://schema.org/Article">
+            <header class="weighty-post-header">
+                    <?php if ( has_post_thumbnail() ) : ?>
                         <?php the_post_thumbnail(); ?>
+                    <? else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fika.jpg" alt=""  />
                     <?php endif; ?>
                     <a href="<?php the_permalink() ?>" rel="bookmark">
                         <h2><?php the_title(); ?></h2>
@@ -17,10 +17,19 @@ get_header();
                         </time>
                     </a>
             </header>
-			<img src="<?php $value = get_post_custom_values("big"); echo $value[0];  ?>" class="big-image" alt=""  />
-			<div class='main-content'>
-				<?php the_content(__('Continue reading...')); ?>
-			</div>
+            <div class="main-content" itemprop="articleBody">
+                <?php
+                $content = explode('<!--more-->', $post->post_content);
+                if( !empty($content[1]) ) :
+                ?>
+                <div class="preamble">
+                <?php echo apply_filters('the_content', $content[0]); ?>
+                </div>
+                <?php echo apply_filters('the_content', $content[1]); ?>
+                <?php else : ?>
+                <?php the_content(); ?>
+                <?php endif; ?>
+            </div>
 		</div>
     <?php endwhile; else: ?>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

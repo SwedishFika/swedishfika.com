@@ -1,8 +1,9 @@
 <?php
 get_header();
 ?>
-<main>
+<main class="page" role="main">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <article role="article" itemscope itemtype="http://schema.org/Article">
         <header class="weighty-post-header">
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail(); ?>
@@ -11,11 +12,10 @@ get_header();
                 <?php endif; ?>
                 <h1><?php the_title(); ?></h1>
         </header>
-        <div id="main-entry" class="page">
-            <div class="article-text">
+        <div class="main-content">
                 <?php the_content(__('Continue reading...')); ?>
-            </div>
         </div>
+    <article>
     <?php endwhile; else: ?>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
     <?php endif; ?>

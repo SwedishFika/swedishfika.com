@@ -515,10 +515,6 @@ img {
     letter-spacing: -1px;
   }
 
-  main h2 {
-    padding-right: 60px;
-  }
-
   main h3,
   main h4 {
     clear: both;
@@ -553,8 +549,6 @@ img {
   }
 
   main img.big-image {
-    border: 1px solid #cfd0cb;
-    padding: 4px;
     width: 446px;
     margin: 0 20px 10px 0;
     float: left;
@@ -575,6 +569,10 @@ img {
   div#main-entry {
     border-bottom: 2px solid #edf1e5;
     padding-bottom: 20px;
+  }
+
+  .preamble {
+    color: #81c0c6;
   }
 
   .main-entry {
@@ -667,7 +665,19 @@ img {
   .weighty-post-header {
     padding: 0 0 15%;
   }
-  .weighty-post-header a,
+  .weighty-post-header a {
+    position: absolute;
+    top: 250px;
+    width: 60%;
+    display: block;
+    border: none;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .weighty-post-header a:hover {
+    border: none;
+  }
   .weighty-post-header h1,
   .weighty-post-header h2 {
     font-family: "Jubilat", Georgia, serif;
@@ -676,8 +686,6 @@ img {
     font-size: 2rem;
     line-height: 1.8125rem;
     color: #fffcde;
-    margin: 20% 0 10%;
-    text-decoration: none;
     text-align: center;
   }
   .weighty-post-header img {
@@ -729,6 +737,13 @@ img {
     line-height: 76px;
     font-size: 5.1875rem;
     line-height: 4.75rem;
+  }
+
+  .preamble {
+    font-size: 42px;
+    line-height: 54px;
+    font-size: 2.625rem;
+    line-height: 3.375rem;
   }
 }
 /* Site navigation*/
@@ -815,14 +830,30 @@ nav a {
   width: 68%;
   margin: 0 auto;
 }
-.single .big-image {
-  float: none;
-  text-align: center;
+.single .main-content {
+  padding-top: 60%;
 }
 
 .page {
   width: 68%;
   margin: 0 auto;
+}
+.page h1 {
+  position: absolute;
+  top: 250px;
+  width: 60%;
+  display: block;
+  border: none;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.page .main-content {
+  padding-top: 60%;
+}
+
+.home .weighty-post-header {
+  padding-bottom: 53%;
 }
 
 /* Comments Template 

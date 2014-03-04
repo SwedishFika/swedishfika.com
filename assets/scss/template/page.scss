@@ -1,4 +1,19 @@
 .page{
     width: 68%;
     margin: 0 auto;
+
+    h1{
+        position: absolute;
+        top: 250px;
+        width: 60%;
+        display: block;
+        border: none;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .main-content{
+        padding-top: 60%;
+    }
 }

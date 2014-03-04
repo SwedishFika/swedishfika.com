@@ -43,9 +43,6 @@
         font-weight: normal;
         letter-spacing: -1px;
     }
-    main h2{
-        padding-right: 60px;
-    }
     main h3,
     main h4 {
         clear: both;
@@ -79,8 +76,6 @@
     }
 
     main img.big-image {
-        border:1px solid #cfd0cb;
-        padding: 4px;
         width: 446px;
         margin:0 20px 10px 0;
         float: left;
@@ -98,7 +93,9 @@
         border-bottom: 2px solid #edf1e5;
         padding-bottom: 20px;
     }
-
+    .preamble{
+        color: $sub-header-color;
+    }
     .main-entry {
         border-bottom: 2px solid #edf1e5;
         padding-bottom: 20px;
@@ -190,14 +187,25 @@
     .weighty-post-header{
         padding:0 0 15%;
 
-        a,
+        a{
+            position: absolute;
+            top: 250px;
+            width: 60%;
+            display: block;
+            border: none;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        a:hover{
+            border: none;
+        }
+
         h1,
         h2{
             font-family: 'Jubilat', Georgia, serif;
             @include font-size(32/$font-base, 29/$font-base);
             color: $header;
-            margin: 20% 0 10%;
-            text-decoration: none;
             text-align: center;
         }
         img{
@@ -241,5 +249,8 @@
         h2{
             @include font-size(83/$font-base, 76/$font-base);
         }
+    }
+    .preamble{
+        @include font-size(42/$font-base, 54/$font-base);
     }
 }
