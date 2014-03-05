@@ -36,28 +36,32 @@
 <?php endif; ?>
 
 <div class="add-comment">
-	<div id="comment-form">
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 			<fieldset>
+				<legend>Leave a message</legend>
 				<div class="formfield-message">
-					<label for="comment">Add your comments</label>
-					<div style=""><textarea id="comment" name="comment" rows="10" cols="59"></textarea><br/><span class="desc">Be nice! Spam and irrelevant comments will be deleted.</span></div>
+					<p>
+						Remember to be nice! Spam and irrelevant comments will be deleted.
+						Also, we won’t post any e-mails so don’t worry. We hate spam too!
+					</p>
+					
 				</div>
 				<div id="author-info">
 					<div class="formfield">
-						<label for="author">Name </label><span class="desc"><?php if ($req) _e('(Required)'); ?></span>
+						<label for="author">Your name <span class="desc"><?php if ($req) _e('*'); ?></span></label>
 						<input type="text" id="author" name="author" value="<?php echo $comment_author; ?>"/>
 					</div>
 					<div class="formfield">
-						<label for="email">Email </label><span class="desc"><?php if ($req) _e('(Required)'); ?></span>
+						<label for="email">Your email <span class="desc"><?php if ($req) _e('*'); ?></span></label>
 						<input type="text" id="email" name="email" value="<?php echo $comment_author_email; ?>"/>
 					</div>
 					<div class="formfield">
-						<label for="url">Website</label>
+						<label for="url">Your website</label>
 						<input type="text" id="url" name="url" value="<?php echo $comment_author_url; ?>"/>
 					</div>
+					<label for="comment">Your comment</label>
+					<div style=""><textarea id="comment" name="comment" rows="10" cols="59"></textarea></div>
 				</div>
-				<span class="desc">Don't worry we don't publish your email, we hate spam too!</span>
 				<div class="formfield-submit">
 					<input type="submit" name="submit" id="submit" value="Post comment" />
 					<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
@@ -65,5 +69,4 @@
 				</div>
 			</fieldset>
 		</form>
-	</div>
 </div>

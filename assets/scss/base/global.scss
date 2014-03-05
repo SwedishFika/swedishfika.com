@@ -31,8 +31,13 @@ p{
     margin: 0 0 20px 0;
     font: inherit;
 }
+legend{
+    font-family: 'Jubilat', Georgia, serif;
+    color: $text-color;
+}
 label{
     display:block;
+    color: $text-color;
 }
 img{
     max-width: 100%;
