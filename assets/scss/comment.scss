@@ -1,24 +1,33 @@
 /* Comments Template 
 -----------------------------------------------------------------------------*/
+.comments{
+    border-top: 4px solid $border-color;
+}
 .add-comment,
 .comments{
     width: 68%;
     margin: 0 auto;
 }
+.comments h2{
+    font-family: $header-font;
+    @include font-size(32/$font-base, 36/$font-base);
+    color: $text-color;
+}
 
 .add-comment input {
-    border: #e8e8e8 1px solid;
+    border: 1px solid $border-color;
     padding: 0.3em;
     font-size: 100%;
     margin-bottom: 1%;
+    width: 90%;
 }
 
-textarea {
-    border: #e8e8e8 1px solid;
+.add-comment textarea {
+    border: 1px solid $border-color;
     padding: 0.3em;
     font-family: Arial;
     font-size: 100%;
-    width: 436px;
+    width: 90%;
 }
 
 .formfield-message {
@@ -34,11 +43,13 @@ textarea {
     padding-top: 20px;
     clear: both;
     display: block;
+
+    input{
+        background: $contrast-color;
+        color: $base-white;
+    }
 }
-label {
-    font-weight: bold;
-}
-div.comment-wrapper {
+.comment-wrapper {
     clear: both;
     padding-top: 10px;
 }
@@ -53,7 +64,6 @@ div.comment-wrapper {
     padding: 0.7em;
     padding-bottom: 1em;
     border-bottom: 1px solid #d3d3d3;
-    background: #fff8ea;
 }
 .comment-author span {
     font-weight: bold;

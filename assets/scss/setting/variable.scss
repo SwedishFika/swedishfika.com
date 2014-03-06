@@ -1,4 +1,5 @@
-$default-font-family: "nimbus-sans", Helvetica, sans-serif;
+$default-font: "nimbus-sans", Helvetica, sans-serif;
+$header-font: 'Jubilat', Georgia, serif;
 
 $font-size: 100% !default; // percentage value (16 * 112.5% = 18px)
 $font-base: 16; // base font-size in pixels to work with in font-size mixins
@@ -19,4 +20,4 @@ $border-color: #dcdcdc;
 
 $text-color: #666565;
 $header: #fffcde;
-$sub-header-color: #81c0c6;
+$contrast-color: #81c0c6;

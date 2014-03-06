@@ -464,6 +464,11 @@ legend {
 label {
   display: block;
   color: #666565;
+  font-weight: bold;
+}
+
+input, textarea {
+  /*@include prefixer(border-radius, 4px, webkit moz spec);*/
 }
 
 img {
@@ -478,6 +483,7 @@ img {
 
   body {
     border-top: 4px solid black;
+    position: relative;
   }
 
   .fika-logo {
@@ -864,25 +870,39 @@ nav a {
 
 /* Comments Template 
 -----------------------------------------------------------------------------*/
+.comments {
+  border-top: 4px solid gainsboro;
+}
+
 .add-comment,
 .comments {
   width: 68%;
   margin: 0 auto;
 }
 
+.comments h2 {
+  font-family: "Jubilat", Georgia, serif;
+  font-size: 32px;
+  line-height: 36px;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  color: #666565;
+}
+
 .add-comment input {
-  border: #e8e8e8 1px solid;
+  border: 1px solid gainsboro;
   padding: 0.3em;
   font-size: 100%;
   margin-bottom: 1%;
+  width: 90%;
 }
 
-textarea {
-  border: #e8e8e8 1px solid;
+.add-comment textarea {
+  border: 1px solid gainsboro;
   padding: 0.3em;
   font-family: Arial;
   font-size: 100%;
-  width: 436px;
+  width: 90%;
 }
 
 .formfield-message {
@@ -899,12 +919,12 @@ textarea {
   clear: both;
   display: block;
 }
-
-label {
-  font-weight: bold;
+.formfield-submit input {
+  background: #81c0c6;
+  color: white;
 }
 
-div.comment-wrapper {
+.comment-wrapper {
   clear: both;
   padding-top: 10px;
 }
@@ -922,7 +942,6 @@ div.comment-wrapper {
   padding: 0.7em;
   padding-bottom: 1em;
   border-bottom: 1px solid lightgrey;
-  background: #fff8ea;
 }
 
 .comment-author span {

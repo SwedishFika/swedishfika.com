@@ -1,9 +1,6 @@
 <?php if ( $comments ) : ?>
 <div class="comments">
-	<div class="section">
 		<h2>Comments</h2>
-	</div>
-	
 	<div id="read-comments" class="comments-wrapper">
 		
 	<?php foreach ($comments as $comment) : ?>

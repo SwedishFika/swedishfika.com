@@ -5,7 +5,7 @@ menu, nav, section, main {
 body {
     color: $text-color;
     font-weight: normal;
-    font-family: $default-font-family;
+    font-family: $default-font;
     font-size: 100%;
 }
 h1, h2, h3, h4, h5, h6{
@@ -16,7 +16,7 @@ h1{
 }
 h2{
     @include font-size(35/$font-base, 40/$font-base);
-    color: $sub-header-color;
+    color: $contrast-color;
     margin:0 0 20px 0;
 }
 h3{
@@ -32,12 +32,16 @@ p{
     font: inherit;
 }
 legend{
-    font-family: 'Jubilat', Georgia, serif;
+    font-family: $header-font;
     color: $text-color;
 }
 label{
     display:block;
     color: $text-color;
+    font-weight: bold;
+}
+input, textarea{
+    /*@include prefixer(border-radius, 4px, webkit moz spec);*/
 }
 img{
     max-width: 100%;

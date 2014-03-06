@@ -5,6 +5,7 @@
     }
     body{
         border-top: 4px solid $base-black;
+        position: relative;
     }
     .fika-logo{
         position: absolute;
@@ -50,7 +51,7 @@
     }
     main h2 a, 
     main h1 a {
-        color: $sub-header-color;
+        color: $contrast-color;
         border-bottom: none;
         text-decoration: none;
     }
@@ -94,7 +95,7 @@
         padding-bottom: 20px;
     }
     .preamble{
-        color: $sub-header-color;
+        color: $contrast-color;
     }
     .main-entry {
         border-bottom: 2px solid #edf1e5;
@@ -226,7 +227,7 @@
             display: block;
             @include font-size(16/$font-base, 18/$font-base);
             color: $base-white;
-            font-family: $default-font-family;
+            font-family: $default-font;
         }
     }
 }
