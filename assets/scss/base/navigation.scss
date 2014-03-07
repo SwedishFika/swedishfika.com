@@ -1,27 +1,46 @@
-/* Site navigation*/
-nav {
-    width: 476px;
-    padding-top: 28px;  
-    position: absolute;
-    right: 80px;
+@media screen{
+    /* Site Navigation*/
+    nav {
+        width: 476px;
+        padding-top: 28px;  
+        position: absolute;
+        right: 80px;
 
-    ul {
-        height: 46px;  
-        position:relative;  
-        padding-left:20px;
+        ul {
+            height: 46px;  
+            position:relative;  
+            padding-left:20px;
+        }
+
+        li { 
+            display: block;
+            float: left;
+            padding-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            float: left;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
     }
 
-    li { 
-        display: block;
-        float: left;
-        padding-left: 20px;
+    /*Page Navigation*/
+    div.navigation {
+        width: 456px;
+        float:left;
     }
 
-    a {
-        text-decoration: none;
-        color: #fff;
-        float: left;
-        overflow: hidden;
-        text-transform: uppercase;
+    div.navigation div.newer {
+        float:right;
+        width:228px;
+        text-align:right;
+    }
+
+    div.navigation div.older {
+        float:left; 
+        width:228px;
     }
 }

@@ -15,6 +15,14 @@
 * Example: @include font-size(18/16, 24/16);
 * @include font-size(2, 2.2);
 */
+/**
+* Prefix-mixin
+* 
+* Send in property, value and the prefixes you want to support
+*
+* Example: @include prefixer(border-radius, $radii, webkit ms spec);
+*
+*/
 /* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -456,6 +464,10 @@ p {
   font: inherit;
 }
 
+fieldset {
+  border: none;
+}
+
 legend {
   font-family: "Jubilat", Georgia, serif;
   color: #666565;
@@ -468,7 +480,9 @@ label {
 }
 
 input, textarea {
-  /*@include prefixer(border-radius, 4px, webkit moz spec);*/
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 
 img {
@@ -723,6 +737,76 @@ img {
     color: white;
     font-family: "nimbus-sans", Helvetica, sans-serif;
   }
+
+  .hidden {
+    display: none;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  ul.post-list {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 5px;
+    text-indent: -8px;
+    padding-bottom: 15px;
+  }
+
+  ul.post-list li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    color: #363636;
+    margin-left: 20px;
+  }
+
+  ol.post-list {
+    width: 379px;
+    float: left;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: decimal;
+    padding: 10px 0px 15px 5px;
+  }
+
+  ol.post-list li {
+    list-style-image: none;
+    list-style-position: outside;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    color: #363636;
+  }
+
+  /*code styles*/
+  pre {
+    background: #fefde0 none repeat scroll 0;
+    border: 1px solid #cccccc;
+    display: block;
+    font-size: 100%;
+    line-height: 11px;
+    padding: 15px 10px;
+    white-space: pre;
+  }
+
+  code {
+    border: 1px solid #cccccc;
+    padding: 15px 10px;
+    line-height: 11px;
+    display: block;
+    font-size: 100%;
+    background: #fefde0;
+    white-space: pre;
+  }
 }
 @media (min-width: 600px) {
   .weighty-post-header a,
@@ -758,31 +842,49 @@ img {
     line-height: 3.375rem;
   }
 }
-/* Site navigation*/
-nav {
-  width: 476px;
-  padding-top: 28px;
-  position: absolute;
-  right: 80px;
-}
-nav ul {
-  height: 46px;
-  position: relative;
-  padding-left: 20px;
-}
-nav li {
-  display: block;
-  float: left;
-  padding-left: 20px;
-}
-nav a {
-  text-decoration: none;
-  color: #fff;
-  float: left;
-  overflow: hidden;
-  text-transform: uppercase;
-}
+@media screen {
+  /* Site Navigation*/
+  nav {
+    width: 476px;
+    padding-top: 28px;
+    position: absolute;
+    right: 80px;
+  }
+  nav ul {
+    height: 46px;
+    position: relative;
+    padding-left: 20px;
+  }
+  nav li {
+    display: block;
+    float: left;
+    padding-left: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    float: left;
+    overflow: hidden;
+    text-transform: uppercase;
+  }
 
+  /*Page Navigation*/
+  div.navigation {
+    width: 456px;
+    float: left;
+  }
+
+  div.navigation div.newer {
+    float: right;
+    width: 228px;
+    text-align: right;
+  }
+
+  div.navigation div.older {
+    float: left;
+    width: 228px;
+  }
+}
 /* Footer */
 .bottom {
   border-top: 1px solid gainsboro;
@@ -868,231 +970,101 @@ nav a {
   padding-bottom: 53%;
 }
 
-/* Comments Template 
------------------------------------------------------------------------------*/
-.comments {
-  border-top: 4px solid gainsboro;
-}
+@media screen {
+  .monthtitle {
+    font-size: 120%;
+  }
 
-.add-comment,
-.comments {
-  width: 68%;
-  margin: 0 auto;
+  .postspermonth li {
+    padding-left: 10px;
+    margin: 0.3em;
+  }
 }
+/* Comments Template */
+@media screen {
+  .comments {
+    border-top: 4px solid gainsboro;
+  }
 
-.comments h2 {
-  font-family: "Jubilat", Georgia, serif;
-  font-size: 32px;
-  line-height: 36px;
-  font-size: 2rem;
-  line-height: 2.25rem;
-  color: #666565;
-}
+  .add-comment,
+  .comments {
+    width: 68%;
+    margin: 0 auto;
+  }
 
-.add-comment input {
-  border: 1px solid gainsboro;
-  padding: 0.3em;
-  font-size: 100%;
-  margin-bottom: 1%;
-  width: 90%;
-}
+  .comments h2 {
+    font-family: "Jubilat", Georgia, serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: #666565;
+  }
 
-.add-comment textarea {
-  border: 1px solid gainsboro;
-  padding: 0.3em;
-  font-family: Arial;
-  font-size: 100%;
-  width: 90%;
-}
+  .add-comment input {
+    border: 1px solid gainsboro;
+    padding: 1.5% 3%;
+    font-size: 100%;
+    margin-bottom: 1%;
+  }
 
-.formfield-message {
-  clear: both;
-}
+  .add-comment textarea {
+    border: 1px solid gainsboro;
+    padding: 0.3em;
+    font-family: Arial;
+    font-size: 100%;
+    width: 90%;
+  }
 
-#author-info {
-  clear: both;
-  padding-top: 15px;
-}
+  .formfield-message {
+    clear: both;
+  }
 
-.formfield-submit {
-  padding-top: 20px;
-  clear: both;
-  display: block;
-}
-.formfield-submit input {
-  background: #81c0c6;
-  color: white;
-}
+  #author-info {
+    clear: both;
+    padding-top: 15px;
+  }
 
-.comment-wrapper {
-  clear: both;
-  padding-top: 10px;
-}
+  .formfield-submit {
+    padding-top: 20px;
+    clear: both;
+    display: block;
+  }
+  .formfield-submit input {
+    background: #81c0c6;
+    color: white;
+  }
 
-.comment-meta {
-  float: left;
-}
+  .comment-wrapper {
+    clear: both;
+    padding-top: 10px;
+  }
 
-.comment-meta a {
-  border-bottom: none;
-}
+  .comment-meta {
+    float: left;
+  }
 
-.message {
-  margin-left: 10px;
-  padding: 0.7em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid lightgrey;
-}
+  .comment-meta a {
+    border-bottom: none;
+  }
 
-.comment-author span {
-  font-weight: bold;
-}
+  .message {
+    margin-left: 10px;
+    padding: 0.7em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid lightgrey;
+  }
 
-.comment-author span.comment-date {
-  font-size: 90%;
-  color: #959595;
-}
+  .comment-author span {
+    font-weight: bold;
+  }
 
-.comment-post {
-  padding-top: 10px;
-}
+  .comment-author span.comment-date {
+    font-size: 90%;
+    color: #959595;
+  }
 
-/* RESET 
------------------------------------------------------------------------------*/
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, p, blockquote, th, td {
-  margin: 0;
-  padding: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-fieldset, img {
-  border: 0;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-caption, th {
-  text-align: left;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-q:before, q:after {
-  content: '';
-}
-
-/* Globals 
------------------------------------------------------------------------------*/
-body {
-  font-family: "nimbus-sans", Helvetica, sans-serif;
-  font-weight: lighter;
-}
-
-code {
-  border: 1px solid #cccccc;
-  padding: 15px 10px;
-  line-height: 11px;
-  display: block;
-  font-size: 100%;
-  background: #fefde0;
-  white-space: pre;
-}
-
-/* Page Nav 
------------------------------------------------------------------------------*/
-div.navigation {
-  width: 456px;
-  float: left;
-}
-
-div.navigation div.newer {
-  float: right;
-  width: 228px;
-  text-align: right;
-}
-
-div.navigation div.older {
-  float: left;
-  width: 228px;
-}
-
-/* Archives 
------------------------------------------------------------------------------*/
-.monthtitle {
-  font-size: 120%;
-}
-
-.postspermonth li {
-  padding-left: 10px;
-  margin: 0.3em;
-}
-
-/* Overall styles 
------------------------------------------------------------------------------*/
-.hidden {
-  display: none;
-}
-
-.block {
-  display: block;
-}
-
-.clear {
-  clear: both;
-}
-
-/*code styles*/
-pre {
-  background: #fefde0 none repeat scroll 0;
-  border: 1px solid #cccccc;
-  display: block;
-  font-size: 100%;
-  line-height: 11px;
-  padding: 15px 10px;
-  white-space: pre;
-}
-
-ul.post-list {
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 5px;
-  text-indent: -8px;
-  padding-bottom: 15px;
-}
-
-ul.post-list li {
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  line-height: 1.5;
-  padding-bottom: 10px;
-  color: #363636;
-  margin-left: 20px;
-}
-
-ol.post-list {
-  width: 379px;
-  float: left;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: decimal;
-  padding: 10px 0px 15px 5px;
-}
-
-ol.post-list li {
-  list-style-image: none;
-  list-style-position: outside;
-  line-height: 1.5;
-  padding-bottom: 10px;
-  color: #363636;
+  .comment-post {
+    padding-top: 10px;
+  }
 }

@@ -31,6 +31,9 @@ p{
     margin: 0 0 20px 0;
     font: inherit;
 }
+fieldset{
+    border: none;
+}
 legend{
     font-family: $header-font;
     color: $text-color;
@@ -41,7 +44,7 @@ label{
     font-weight: bold;
 }
 input, textarea{
-    /*@include prefixer(border-radius, 4px, webkit moz spec);*/
+    @include prefixer(border-radius, 4px, moz webkit spec);
 }
 img{
     max-width: 100%;
