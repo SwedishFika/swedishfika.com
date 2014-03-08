@@ -42,9 +42,9 @@ get_header();
         <? endif; ?>
         <?php endwhile; ?>
         <?php if (show_posts_nav()) : ?>
-        <div class="navigation">
-            <div class="older"><?php next_posts_link('&laquo; Older Entries') ?></div>
-            <div class="newer"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+        <div class="page-navigation">
+            <div class="older"><?php next_posts_link('&larr; Previous') ?></div>
+            <div class="newer"><?php previous_posts_link('Newer Entries &rarr;') ?></div>
         </div>
         <?php endif; ?>
     <?php   else: ?>

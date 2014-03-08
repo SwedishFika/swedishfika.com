@@ -28,19 +28,30 @@
     }
 
     /*Page Navigation*/
-    div.navigation {
-        width: 456px;
-        float:left;
-    }
+    .page-navigation {
+        clear: both;
+        overflow: hidden;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
 
-    div.navigation div.newer {
+        a{
+            color: $contrast-color;
+            border-bottom: 0;
+            display: block;
+            padding: 9% 20% 7% 15%;
+            white-space: nowrap;
+            width: 150px;
+        }
+    }
+    .newer {
         float:right;
-        width:228px;
         text-align:right;
+        border-left: 1px solid $border-color;
+        overflow: hidden;
     }
-
-    div.navigation div.older {
+    .older {
         float:left; 
-        width:228px;
+        border-right: 1px solid $border-color;
+        overflow: hidden;
     }
 }

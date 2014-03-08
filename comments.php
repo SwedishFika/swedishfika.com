@@ -1,33 +1,25 @@
 <?php if ( $comments ) : ?>
 <div class="comments">
 		<h2>Comments</h2>
-	<div id="read-comments" class="comments-wrapper">
 		
 	<?php foreach ($comments as $comment) : ?>
 	<?php if ( $comment->user_id == get_the_author_ID() ) : ?>
-		<div class="comment-wrapper admin-comment" id="comment-<?php comment_ID() ?>">
+		<article class="comment admin-comment" id="comment-<?php comment_ID() ?>">
 	<?php else : ?>
-		<div class="comment-wrapper" id="comment-<?php comment_ID() ?>">
+		<article class="comment" id="comment-<?php comment_ID() ?>">
 	<?php endif; ?>	
-			<div class="comments-info">
-				<div class="comment-meta">
-					<?php do_action('gravatar', array('size' => 40,'default' => 'http://swedishfika.com/wp-content/themes/swedishfika/blank.png')) ?>
+			<?php do_action('gravatar', array('size' => 66,'default' => get_template_directory_uri()+'/assets/blank.png')) ?>
+			<div class="message">
+				<div class="comment-author">
+					<span><?php comment_author_link() ?></span>
+					<time class="comment-date"><?php comment_date() ?></time>
 				</div>
-				<div class="message">
-					<div class="comment-author">
-						<span><?php comment_author_link() ?></span>
-						<span class="comment-date"><?php comment_date() ?></span>
-					</div>
-					<div class="comment-post">
-						<?php comment_text() ?>
-					</div>
+				<div class="comment-post">
+					<?php comment_text() ?>
 				</div>
 			</div>
-		</div>
+		</article>
 		<?php endforeach; ?>
-			
-	</div>
-
 </div>
 
 <?php endif; ?>
@@ -35,7 +27,7 @@
 <div class="add-comment">
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 			<fieldset>
-				<legend>Leave a message</legend>
+				<legend>Leave a comment</legend>
 				<div class="formfield-message">
 					<p>
 						Remember to be nice! Spam and irrelevant comments will be deleted.

@@ -500,6 +500,10 @@ img {
     position: relative;
   }
 
+  .customize-support {
+    padding-top: 30px;
+  }
+
   .fika-logo {
     position: absolute;
     left: 50%;
@@ -516,7 +520,7 @@ img {
 
   #container {
     width: 1280px;
-    margin: 0 auto 3%;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -534,7 +538,7 @@ img {
 
   main h2,
   main h1 {
-    padding: 5px 0 10px 0;
+    padding: 15px 0 10px 0;
     font-size: 215%;
     color: #57371b;
     font-weight: normal;
@@ -602,9 +606,8 @@ img {
   }
 
   .main-entry {
-    border-bottom: 2px solid #edf1e5;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+    padding: 0;
     overflow: hidden;
     clear: left;
     position: relative;
@@ -869,20 +872,32 @@ img {
   }
 
   /*Page Navigation*/
-  div.navigation {
-    width: 456px;
-    float: left;
+  .page-navigation {
+    clear: both;
+    overflow: hidden;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+  }
+  .page-navigation a {
+    color: #81c0c6;
+    border-bottom: 0;
+    display: block;
+    padding: 9% 20% 7% 15%;
+    white-space: nowrap;
+    width: 150px;
   }
 
-  div.navigation div.newer {
+  .newer {
     float: right;
-    width: 228px;
     text-align: right;
+    border-left: 1px solid gainsboro;
+    overflow: hidden;
   }
 
-  div.navigation div.older {
+  .older {
     float: left;
-    width: 228px;
+    border-right: 1px solid gainsboro;
+    overflow: hidden;
   }
 }
 /* Footer */
@@ -982,14 +997,12 @@ img {
 }
 /* Comments Template */
 @media screen {
-  .comments {
-    border-top: 4px solid gainsboro;
-  }
-
   .add-comment,
   .comments {
     width: 68%;
     margin: 0 auto;
+    padding: 1.5% 0 0 0;
+    border-top: 4px solid gainsboro;
   }
 
   .comments h2 {
@@ -1000,29 +1013,43 @@ img {
     line-height: 2.25rem;
     color: #666565;
   }
+  .comments .avatar {
+    -moz-border-radius: 66px;
+    -webkit-border-radius: 66px;
+    border-radius: 66px;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+  .comments .comment {
+    padding: 0 0 1% 76px;
+    position: relative;
+    min-height: 80px;
+    clear: both;
+  }
+  .comments .comment-date {
+    color: #81c0c6;
+    font-size: 14px;
+    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 
-  .add-comment input {
+  .add-comment input, .add-comment textarea {
     border: 1px solid gainsboro;
     padding: 1.5% 3%;
     font-size: 100%;
     margin-bottom: 1%;
   }
-
   .add-comment textarea {
-    border: 1px solid gainsboro;
-    padding: 0.3em;
-    font-family: Arial;
-    font-size: 100%;
     width: 90%;
   }
-
-  .formfield-message {
-    clear: both;
-  }
-
-  #author-info {
-    clear: both;
-    padding-top: 15px;
+  .add-comment legend {
+    font-size: 32px;
+    line-height: 36px;
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
 
   .formfield-submit {
@@ -1035,33 +1062,17 @@ img {
     color: white;
   }
 
-  .comment-wrapper {
+  .formfield-message {
     clear: both;
-    padding-top: 10px;
   }
 
-  .comment-meta {
-    float: left;
-  }
-
-  .comment-meta a {
-    border-bottom: none;
-  }
-
-  .message {
-    margin-left: 10px;
-    padding: 0.7em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid lightgrey;
+  #author-info {
+    clear: both;
+    padding-top: 15px;
   }
 
   .comment-author span {
     font-weight: bold;
-  }
-
-  .comment-author span.comment-date {
-    font-size: 90%;
-    color: #959595;
   }
 
   .comment-post {

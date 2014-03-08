@@ -7,6 +7,9 @@
         border-top: 4px solid $base-black;
         position: relative;
     }
+    .customize-support{
+        padding-top:30px;
+    }
     .fika-logo{
         position: absolute;
         left: 50%;
@@ -23,7 +26,7 @@
     }
     #container{
         width: $framework-max-width;
-        margin: 0 auto 3%;
+        margin: 0 auto;
         padding: 0;
     }
     main {
@@ -38,7 +41,7 @@
     }
     main h2, 
     main h1 {
-        padding: 5px 0 10px 0;
+        padding: 15px 0 10px 0;
         font-size: 215%;
         color: #57371b;
         font-weight: normal;
@@ -98,9 +101,8 @@
         color: $contrast-color;
     }
     .main-entry {
-        border-bottom: 2px solid #edf1e5;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        padding: 0;
         overflow: hidden;
         clear: left;
         position: relative;
