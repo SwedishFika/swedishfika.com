@@ -5,16 +5,12 @@
     }
     body{
         border-top: 4px solid $base-black;
-        position: relative;
-    }
-    .customize-support{
-        padding-top:30px;
     }
     .fika-logo{
         position: absolute;
         left: 50%;
         margin-left: -50px;
-        top: 100px;
+        top: 2%;
     }
     .fika-header{
         a{
@@ -24,10 +20,11 @@
             display: block;
         }
     }
-    #container{
-        width: $framework-max-width;
+    .fika-container{
+        max-width: $framework-max-width;
         margin: 0 auto;
         padding: 0;
+        position: relative;
     }
     main {
         clear: both;
@@ -79,12 +76,6 @@
         padding-bottom: 10px;
     }
 
-    main img.big-image {
-        width: 446px;
-        margin:0 20px 10px 0;
-        float: left;
-    }
-
     main a.big-image-link, 
     main a.big-image-link:hover {
         border: none;
@@ -105,13 +96,6 @@
         padding: 0;
         overflow: hidden;
         clear: left;
-        position: relative;
-
-            h2,
-            .pub-date,
-            .main-content{
-                padding-left: 476px;
-            }
     }
 
     .main-entry ul, #main-entry ul {
@@ -136,7 +120,7 @@
     }
 
     .entry {
-        width: 456px;
+        max-width: 456px;
         border-bottom: 2px solid #edf1e5;
         padding-bottom: 20px;
         padding-top: 20px;
@@ -320,5 +304,19 @@
     }
     .preamble{
         @include font-size(42/$font-base, 54/$font-base);
+    }
+    .main-entry {
+        position: relative;
+
+            h2,
+            .pub-date,
+            .main-content{
+                padding-left: 476px;
+            }
+    }
+    main img.big-image {
+        max-width: 446px;
+        margin:0 20px 10px 0;
+        float: left;
     }
 }

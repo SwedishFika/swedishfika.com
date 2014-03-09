@@ -1,28 +1,21 @@
 @media screen{
     /* Site Navigation*/
     nav {
-        width: 476px;
-        padding-top: 28px;  
-        position: absolute;
-        right: 80px;
 
         ul {
-            height: 46px;  
-            position:relative;  
-            padding-left:20px;
+            position: relative;
+            margin: 0;
+            padding: 45% 0 0 0;
+            list-style: none;
+            text-align: center;
         }
-
         li { 
-            display: block;
-            float: left;
-            padding-left: 20px;
+            padding:0 10px;
+            display: inline;
         }
-
         a {
             text-decoration: none;
-            color: #fff;
-            float: left;
-            overflow: hidden;
+            color: $base-white;
             text-transform: uppercase;
         }
     }
@@ -53,5 +46,27 @@
         float:left; 
         border-right: 1px solid $border-color;
         overflow: hidden;
+    }
+}
+@media (min-width: 980px) {
+    nav {
+        width: 476px;
+        padding-top: 28px;  
+        position: absolute;
+        right: 80px;
+
+        ul {
+            height: 46px;  
+            padding:0;
+        }
+        li { 
+            padding-left: 20px;
+            display: block;
+            float: left;
+        }
+        a {
+            float: left;
+            overflow: hidden;
+        }
     }
 }

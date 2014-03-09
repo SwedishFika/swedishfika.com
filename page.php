@@ -13,9 +13,9 @@ get_header();
                 <h1><?php the_title(); ?></h1>
         </header>
         <div class="main-content">
-                <?php the_content(__('Continue reading...')); ?>
+            <?php the_content(__('Continue reading...')); ?>
         </div>
-    <article>
+    </article>
     <?php endwhile; else: ?>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
     <?php endif; ?>

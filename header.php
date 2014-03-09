@@ -42,7 +42,7 @@ else
 }
 ?>
 
-<div id="container">
+<div class="fika-container">
     <header class="fika-logo" role="banner">
         <h1>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/swedish-fika-logo.png" alt="<?php bloginfo('name');?>">
